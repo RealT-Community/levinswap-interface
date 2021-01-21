@@ -320,7 +320,7 @@ describe('list reducer', () => {
       store.dispatch(removeList('fake-url'))
       expect(store.getState()).toEqual({
         byUrl: {},
-        selectedListUrl: 'https://gateway.pinata.cloud/ipfs/QmeTgLTtUUfGbnv7whftNoTXHNQwCUMAWnn5wMnjVxLzYn'
+        selectedListUrl: 'https://tokenlists.levinswap.org/'
       })
     })
   })
