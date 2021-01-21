@@ -315,12 +315,12 @@ describe('list reducer', () => {
             pendingUpdate: PATCHED_STUB_LIST
           }
         },
-        selectedListUrl: 'fake-url'
+        selectedListUrl: undefined
       })
       store.dispatch(removeList('fake-url'))
       expect(store.getState()).toEqual({
         byUrl: {},
-        selectedListUrl: 'https://gateway.pinata.cloud/ipfs/QmQRnMCKyqkDNkAStAWstMKPREtT77DEwfHTLwh3uKBTxE'
+        selectedListUrl: 'https://gateway.pinata.cloud/ipfs/QmeTgLTtUUfGbnv7whftNoTXHNQwCUMAWnn5wMnjVxLzYn'
       })
     })
   })
