@@ -1,5 +1,5 @@
 // the Uniswap Default token list lives here
 export const DEFAULT_TOKEN_LIST_URL =
-  'https://ipfs.io/ipfs/QmdfJoc8VXmMZq1u7hdMR7iMGsQS55H6XLAvLYY8fdic4u?filename=Tokenlist'
+  'https://ipfs.io/ipfs/QmQ7CzT7zURtBV31BGG7WKv3jA7V5msmNaNcfv7GePNTgg?filename=Tokenlist'
 
 export const DEFAULT_LIST_OF_LISTS: string[] = [DEFAULT_TOKEN_LIST_URL]
