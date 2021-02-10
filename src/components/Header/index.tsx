@@ -30,6 +30,7 @@ import ClaimModal from '../claim/ClaimModal'
 import Modal from '../Modal'
 import UniBalanceContent from './UniBalanceContent'
 // import usePrevious from '../../hooks/usePrevious'
+import { RampInstantSDK } from '@ramp-network/ramp-instant-sdk';
 
 const HeaderFrame = styled.div`
   display: grid;
@@ -119,6 +120,23 @@ const AccountElement = styled.div<{ active: boolean }>`
   white-space: nowrap;
   width: 100%;
   cursor: pointer;
+
+  :focus {
+    border: 1px solid blue;
+  }
+`
+
+const Ramp = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #FFD8A7;
+  padding: 10px 15px 10px 15px;
+  border-radius: 12px;
+  white-space: nowrap;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 500;
 
   :focus {
     border: 1px solid blue;
@@ -225,7 +243,7 @@ const StyledNavLink = styled(NavLink).attrs({
 
 const StyledExternalLink = styled(ExternalLink).attrs({
   activeClassName
-})<{ isActive?: boolean }>`
+}) <{ isActive?: boolean }>`
   ${({ theme }) => theme.flexRowNoWrap}
   align-items: left;
   border-radius: 3rem;
@@ -267,6 +285,18 @@ export default function Header() {
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
   const [isDark] = useDarkModeManager()
+
+  const startRamp = () => {
+    new RampInstantSDK({
+      hostAppName: 'Ramp',
+      hostLogoUrl: 'https://ramp.network/assets/images/Logo.svg',
+      swapAsset: 'XDAI',
+      hostApiKey: '',
+      variant: 'auto'
+    })
+      .on('*', (event) => console.log(event))
+      .show();
+  }
 
   // const toggleClaimModal = useToggleSelfClaimModal()
 
@@ -329,6 +359,7 @@ export default function Header() {
               <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
             )}
           </HideSmall>
+          <Ramp id={'ramp_btn'} onClick={startRamp}>Buy xDai</Ramp>
           {/* {availableClaim && !showClaimPopup && (
             <UNIWrapper onClick={toggleClaimModal}>
               <UNIAmount active={!!account && !availableClaim} style={{ pointerEvents: 'auto' }}>
