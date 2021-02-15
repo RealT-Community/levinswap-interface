@@ -30,7 +30,7 @@ import ClaimModal from '../claim/ClaimModal'
 import Modal from '../Modal'
 import UniBalanceContent from './UniBalanceContent'
 // import usePrevious from '../../hooks/usePrevious'
-import { RampInstantSDK } from '@ramp-network/ramp-instant-sdk';
+import { RampInstantSDK } from '@ramp-network/ramp-instant-sdk'
 
 const HeaderFrame = styled.div`
   display: grid;
@@ -130,7 +130,8 @@ const Ramp = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #FFD8A7;
+  background-color: ${({ theme }) => theme.yellow1};
+  color: ${({ theme }) => theme.white};
   padding: 10px 15px 10px 15px;
   border-radius: 12px;
   white-space: nowrap;
@@ -182,6 +183,7 @@ const NetworkCard = styled(YellowCard)`
     overflow: hidden;
     text-overflow: ellipsis;
     flex-shrink: 1;
+    cursor: pointer;
   `};
 `
 
@@ -243,7 +245,7 @@ const StyledNavLink = styled(NavLink).attrs({
 
 const StyledExternalLink = styled(ExternalLink).attrs({
   activeClassName
-}) <{ isActive?: boolean }>`
+})<{ isActive?: boolean }>`
   ${({ theme }) => theme.flexRowNoWrap}
   align-items: left;
   border-radius: 3rem;
@@ -288,14 +290,14 @@ export default function Header() {
 
   const startRamp = () => {
     new RampInstantSDK({
-      hostAppName: 'Ramp',
-      hostLogoUrl: 'https://ramp.network/assets/images/Logo.svg',
+      hostAppName: 'Levinswap',
+      hostLogoUrl: 'https://ipfs.io/ipfs/QmVEppJVho5LbRRkX375DNxjUtnw2pjZqTNbpKypLwRipu?filename=512x512.png',
       swapAsset: 'XDAI',
-      hostApiKey: '',
+      hostApiKey: 'vqr2vvudpondpce26c7mye27ge6b67v29ezn3fxt',
       variant: 'auto'
     })
-      .on('*', (event) => console.log(event))
-      .show();
+      .on('*', event => console.log(event))
+      .show()
   }
 
   // const toggleClaimModal = useToggleSelfClaimModal()
@@ -359,7 +361,9 @@ export default function Header() {
               <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
             )}
           </HideSmall>
-          <Ramp id={'ramp_btn'} onClick={startRamp}>Buy xDai</Ramp>
+          <Ramp id={'ramp_btn'} onClick={startRamp}>
+            Buy xDai
+          </Ramp>
           {/* {availableClaim && !showClaimPopup && (
             <UNIWrapper onClick={toggleClaimModal}>
               <UNIAmount active={!!account && !availableClaim} style={{ pointerEvents: 'auto' }}>

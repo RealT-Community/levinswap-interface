@@ -85,7 +85,7 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-const CODE_LINK = 'https://github.com/Uniswap/uniswap-interface'
+const CODE_LINK = 'https://github.com/Levinswap/levinswap-interface'
 
 export default function Menu() {
   // const { account } = useActiveWeb3React()
@@ -109,7 +109,7 @@ export default function Menu() {
             <Info size={14} />
             About
           </MenuItem>
-          <MenuItem id="link" href="https://wiki.levinswap.org/levinswap-wiki/">
+          <MenuItem id="link" href="https://wiki.levinswap.org/">
             <BookOpen size={14} />
             Docs
           </MenuItem>
@@ -117,7 +117,7 @@ export default function Menu() {
             <Code size={14} />
             Code
           </MenuItem>
-          <MenuItem id="link" href="https://discord.gg/EwFs3Pp">
+          <MenuItem id="link" href="https://discord.gg/vYHCcJQFPW">
             <MessageCircle size={14} />
             Discord
           </MenuItem>

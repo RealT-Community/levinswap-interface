@@ -320,7 +320,7 @@ describe('list reducer', () => {
       store.dispatch(removeList('fake-url'))
       expect(store.getState()).toEqual({
         byUrl: {},
-        selectedListUrl: 'https://tokenlists.levinswap.org/'
+        selectedListUrl: 'https://ipfs.io/ipfs/QmX8KFXvKrpqJ1ET16JXNPYhqQn73qRRbZRHiRX6Rui9Zn?filename=Tokenlist'
       })
     })
   })

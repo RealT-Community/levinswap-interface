@@ -41,12 +41,12 @@ export function colors(darkMode: boolean): Colors {
     black,
 
     // gradient colors
-    grd1: darkMode ? '#bf8700' : '#FAF4E5', // lower left
-    grd2: darkMode ? '#bf8700' : '#FAF4E5', // slightly above lower left
-    grd3: darkMode ? '#bf8700' : '#EDDBAA', // still lower left
-    grd4: darkMode ? '#2C2F36' : '#FFFFFF', // middle diagonal
-    grd5: darkMode ? '#5e6263' : '#FAF4E5', // upper right diagonal
-    grd6: darkMode ? '#2C2F36' : '#EDDBAA', // upper right
+    grd1: darkMode ? '#a27395' : '#ffffff', // lower left
+    grd2: darkMode ? '#a27395' : '#fae5ec', // slightly above lower left
+    grd3: darkMode ? '#a27395' : '#fae5ec', // still lower left
+    grd4: darkMode ? '#2C2F36' : '#fae5ec', // middle diagonal
+    grd5: darkMode ? '#5e6263' : '#fae5ec', // upper right diagonal
+    grd6: darkMode ? '#2C2F36' : '#ffffff', // upper right
 
     // text
     text1: darkMode ? '#FFFFFF' : '#000000',
@@ -67,26 +67,26 @@ export function colors(darkMode: boolean): Colors {
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#cc9249' : '#f6a948',
-    primary2: darkMode ? '#cc9249' : '#f6a948',
-    primary3: darkMode ? '#cc9249' : '#ff9919',
-    primary4: darkMode ? '#cc9249' : '#ff9919',
-    primary5: darkMode ? '#cc9249' : '#ffd8a7',
+    primary1: darkMode ? '#a27395' : '#463e53',
+    primary2: darkMode ? '#463e53' : '#463e53',
+    primary3: darkMode ? '#a27395' : '#463e53',
+    primary4: darkMode ? '#a27395' : '#463e53',
+    primary5: darkMode ? '#a27395' : '#a27395',
 
     // color text
-    primaryText1: darkMode ? white : '#090004',
+    primaryText1: darkMode ? white : '#fff',
 
     // secondary colors
     secondary1: darkMode ? '#2172E5' : '#ff007a',
-    secondary2: darkMode ? '#17000b26' : '#F6DDE8',
+    secondary2: darkMode ? '#17000b26' : '#a27395',
     secondary3: darkMode ? '#17000b26' : '#FDEAF1',
 
     // other
     red1: '#FF6871',
     red2: '#F82D3A',
     green1: '#27AE60',
-    yellow1: '#FFE270',
-    yellow2: '#F3841E',
+    yellow1: '#a27395',
+    yellow2: '#463e53',
     blue1: '#2172E5'
 
     // dont wanna forget these blue yet
