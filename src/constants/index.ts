@@ -14,14 +14,7 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-
-export const USDC = new Token(
-  ChainId.XDAI,
-  '0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83',
-  18,
-  'USDC',
-  'USDC on xDai'
-)
+export const USDC = new Token(ChainId.XDAI, '0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83', 18, 'USDC', 'USDC on xDai')
 
 export const XDAI_WETH = new Token(
   ChainId.XDAI,
@@ -46,7 +39,6 @@ export const LEVIN = new Token(
   'LEVIN',
   'Levin Token on xDai'
 )
-
 
 // Block time here is slightly higher (~1s) than average in order to avoid ongoing proposals past the displayed time
 export const AVERAGE_BLOCK_TIME_IN_SECS = 13
