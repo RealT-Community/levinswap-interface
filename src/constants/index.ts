@@ -14,7 +14,15 @@ type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const USDC = new Token(ChainId.XDAI, '0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83', 6, 'USDC', 'USDC on xDai')
+
+export const USDC = new Token(
+  ChainId.XDAI,
+  '0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83',
+  18,
+  'USDC',
+  'USDC on xDai'
+)
+
 export const XDAI_WETH = new Token(
   ChainId.XDAI,
   '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1',
@@ -22,6 +30,7 @@ export const XDAI_WETH = new Token(
   'WETH',
   'Wrapped Ether on xDai'
 )
+
 export const STAKE = new Token(
   ChainId.XDAI,
   '0xb7D311E2Eb55F2f68a9440da38e7989210b9A05e',
@@ -29,6 +38,15 @@ export const STAKE = new Token(
   'STAKE',
   'Stake Token on xDai'
 )
+
+export const LEVIN = new Token(
+  ChainId.XDAI,
+  '0x64e8a115ec254a6a5949dbc5801a8ccf3ae4f72f',
+  18,
+  'LEVIN',
+  'Levin Token on xDai'
+)
+
 
 // Block time here is slightly higher (~1s) than average in order to avoid ongoing proposals past the displayed time
 export const AVERAGE_BLOCK_TIME_IN_SECS = 13
@@ -72,7 +90,7 @@ const WETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.XDAI]: [...WETH_ONLY[ChainId.XDAI], XDAI_WETH, STAKE]
+  [ChainId.XDAI]: [...WETH_ONLY[ChainId.XDAI], XDAI_WETH, LEVIN, STAKE, USDC]
 }
 
 /**
@@ -84,13 +102,13 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.XDAI]: [...WETH_ONLY[ChainId.XDAI], XDAI_WETH, STAKE]
+  [ChainId.XDAI]: [...WETH_ONLY[ChainId.XDAI], XDAI_WETH, LEVIN, STAKE, USDC]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.XDAI]: [...WETH_ONLY[ChainId.XDAI], XDAI_WETH, STAKE]
+  [ChainId.XDAI]: [...WETH_ONLY[ChainId.XDAI], XDAI_WETH, LEVIN, STAKE, USDC]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {}
