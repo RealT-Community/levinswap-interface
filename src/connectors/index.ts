@@ -30,10 +30,9 @@ export const injected = new InjectedConnector({
   supportedChainIds: [100]
 })
 
-// mainnet only
 export const walletconnect = new WalletConnectConnector({
-  rpc: { 100: NETWORK_URL },
-  bridge: 'https://rpc.xdaichain.com/',
+  rpc: { 100: 'https://rpc.xdaichain.com/' },
+  bridge: 'https://bridge.walletconnect.org/',
   qrcode: true,
   pollingInterval: 15000
 })
@@ -44,16 +43,15 @@ export const fortmatic = new FortmaticConnector({
   chainId: 1
 })
 
-// mainnet only
 export const portis = new PortisConnector({
   dAppId: PORTIS_ID ?? '',
-  networks: [1]
+  networks: [100]
 })
 
 // mainnet only
 export const walletlink = new WalletLinkConnector({
   url: NETWORK_URL,
-  appName: 'Uniswap',
+  appName: 'Levinswap',
   appLogoUrl:
-    'https://mpng.pngfly.com/20181202/bex/kisspng-emoji-domain-unicorn-pin-badges-sticker-unicorn-tumblr-emoji-unicorn-iphoneemoji-5c046729264a77.5671679315437924251569.jpg'
+    'https://raw.githubusercontent.com/Levinswap/levinswap-interface/master/public/images/192x192_App_Icon.png'
 })
