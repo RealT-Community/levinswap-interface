@@ -29,8 +29,8 @@ const StatContainer = styled.div`
 `};
 `
 
-const Wrapper = styled(AutoColumn)<{ showBackground: boolean; bgColor: any }>`
-  border-radius: 12px;
+const Wrapper = styled(AutoColumn) <{ showBackground: boolean; bgColor: any }>`
+  border-radius: 5px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -118,7 +118,7 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
         </TYPE.white>
 
         <StyledInternalLink to={`/uni/${currencyId(currency0)}/${currencyId(currency1)}`} style={{ width: '100%' }}>
-          <ButtonPrimary padding="8px" borderRadius="8px">
+          <ButtonPrimary padding="8px" borderRadius="5px">
             {isStaking ? 'Manage' : 'Deposit'}
           </ButtonPrimary>
         </StyledInternalLink>
@@ -139,8 +139,8 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
             {stakingInfo
               ? stakingInfo.active
                 ? `${stakingInfo.totalRewardRate
-                    ?.multiply(BIG_INT_SECONDS_IN_WEEK)
-                    ?.toFixed(0, { groupSeparator: ',' })} UNI / week`
+                  ?.multiply(BIG_INT_SECONDS_IN_WEEK)
+                  ?.toFixed(0, { groupSeparator: ',' })} UNI / week`
                 : '0 UNI / week'
               : '-'}
           </TYPE.white>
@@ -162,8 +162,8 @@ export default function PoolCard({ stakingInfo }: { stakingInfo: StakingInfo }) 
               {stakingInfo
                 ? stakingInfo.active
                   ? `${stakingInfo.rewardRate
-                      ?.multiply(BIG_INT_SECONDS_IN_WEEK)
-                      ?.toSignificant(4, { groupSeparator: ',' })} UNI / week`
+                    ?.multiply(BIG_INT_SECONDS_IN_WEEK)
+                    ?.toSignificant(4, { groupSeparator: ',' })} UNI / week`
                   : '0 UNI / week'
                 : '-'}
             </TYPE.black>

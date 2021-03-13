@@ -29,10 +29,10 @@ const StyledNavLink = styled(NavLink).attrs({
   cursor: pointer;
   text-decoration: none;
   color: ${({ theme }) => theme.text3};
-  font-size: 20px;
+  font-size: 16px;
 
   &.${activeClassName} {
-    border-radius: 12px;
+    border-radius: 5px;
     font-weight: 500;
     color: ${({ theme }) => theme.text1};
   }
@@ -43,6 +43,34 @@ const StyledNavLink = styled(NavLink).attrs({
   }
 `
 
+const StyledNavLinkLiquidity = styled(NavLink).attrs({
+  activeClassName
+})`
+  ${({ theme }) => theme.flexRowNoWrap}
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  border-radius: 3rem;
+  margin-left: 15px;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: ${({ theme }) => theme.text3};
+  font-size: 16px;
+
+  &.${activeClassName} {
+    border-radius: 5px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.text1};
+  }
+
+  :hover,
+  :focus {
+    color: ${({ theme }) => darken(0.1, theme.text1)};
+  }
+`
+
+
 const ActiveText = styled.div`
   font-weight: 500;
   font-size: 20px;
@@ -50,6 +78,23 @@ const ActiveText = styled.div`
 
 const StyledArrowLeft = styled(ArrowLeft)`
   color: ${({ theme }) => theme.text1};
+`
+
+const SwapMenuStyled = styled.div`
+  font-weight: 500;
+`
+
+const RowStyled = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 0px 15px 10px 15px;
+    position: ;
+`
+
+const Row = styled.div`
+    display: flex;
+    justify-content: space-between;
+    height: 58px;
 `
 
 export function SwapPoolTabs({ active }: { active: 'swap' | 'pool' }) {
@@ -70,7 +115,7 @@ export function FindPoolTabs() {
   return (
     <Tabs>
       <RowBetween style={{ padding: '1rem' }}>
-        <HistoryLink to="/pool">
+        <HistoryLink to="/add/ETH">
           <StyledArrowLeft />
         </HistoryLink>
         <ActiveText>Import Pool</ActiveText>
@@ -81,21 +126,29 @@ export function FindPoolTabs() {
 }
 
 export function AddRemoveTabs({ adding, creating }: { adding: boolean; creating: boolean }) {
+  const { t } = useTranslation()
   return (
-    <Tabs>
-      <RowBetween style={{ padding: '1rem' }}>
-        <HistoryLink to="/pool">
-          <StyledArrowLeft />
-        </HistoryLink>
-        <ActiveText>{creating ? 'Create a pair' : adding ? 'Add Liquidity' : 'Remove Liquidity'}</ActiveText>
-        <QuestionHelper
-          text={
-            adding
-              ? 'When you add liquidity, you are given pool tokens representing your position. These tokens automatically earn fees proportional to your share of the pool, and can be redeemed at any time.'
-              : 'Removing pool tokens converts your position back into underlying tokens at the current rate, proportional to your share of the pool. Accrued fees are included in the amounts you receive.'
-          }
-        />
-      </RowBetween>
-    </Tabs>
+    <SwapMenuStyled>
+      <Row>
+        <RowStyled>
+          <StyledNavLink id={`swap-nav-link`} to={'/swap'}>
+            {t('swap')}
+          </StyledNavLink>
+          <StyledNavLinkLiquidity id={`swap-nav-link`} to={'/add/ETH'}>
+            {t('+ Liquidity')}
+          </StyledNavLinkLiquidity>
+
+        </RowStyled>
+        <RowStyled>
+          <QuestionHelper
+            text={
+              adding
+                ? 'When you add liquidity, you are given pool tokens representing your position. These tokens automatically earn fees proportional to your share of the pool, and can be redeemed at any time.'
+                : 'Removing pool tokens converts your position back into underlying tokens at the current rate, proportional to your share of the pool. Accrued fees are included in the amounts you receive.'
+            }
+          />
+        </RowStyled>
+      </Row>
+    </SwapMenuStyled>
   )
 }

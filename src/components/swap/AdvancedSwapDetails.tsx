@@ -16,7 +16,7 @@ const InfoLink = styled(ExternalLink)`
   width: 100%;
   border: 1px solid ${({ theme }) => theme.bg3};
   padding: 6px 6px;
-  border-radius: 8px;
+  border-radius: 5px;
   text-align: center;
   font-size: 14px;
   color: ${({ theme }) => theme.text1};
@@ -42,9 +42,9 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
             <TYPE.black color={theme.text1} fontSize={14}>
               {isExactIn
                 ? `${slippageAdjustedAmounts[Field.OUTPUT]?.toSignificant(4)} ${trade.outputAmount.currency.symbol}` ??
-                  '-'
+                '-'
                 : `${slippageAdjustedAmounts[Field.INPUT]?.toSignificant(4)} ${trade.inputAmount.currency.symbol}` ??
-                  '-'}
+                '-'}
             </TYPE.black>
           </RowFixed>
         </RowBetween>

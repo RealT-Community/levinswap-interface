@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { CardProps, Text } from 'rebass'
 import { Box } from 'rebass/styled-components'
 
-const Card = styled(Box)<{ padding?: string; border?: string; borderRadius?: string }>`
+const Card = styled(Box) <{ padding?: string; border?: string; borderRadius?: string }>`
   width: 100%;
-  border-radius: 16px;
+  border-radius: 5px;
   padding: 1.25rem;
   padding: ${({ padding }) => padding};
   border: ${({ border }) => border};
@@ -16,6 +16,9 @@ export default Card
 export const LightCard = styled(Card)`
   border: 1px solid ${({ theme }) => theme.bg2};
   background-color: ${({ theme }) => theme.bg1};
+`
+export const LightGreyCard = styled(Card)`
+  background-color: ${({ theme }) => theme.bg2};
 `
 
 export const GreyCard = styled(Card)`
@@ -41,7 +44,7 @@ export const PinkCard = styled(Card)`
 const BlueCardStyled = styled(Card)`
   background-color: ${({ theme }) => theme.primary5};
   color: ${({ theme }) => theme.primary1};
-  border-radius: 12px;
+  border-radius: 5px;
   width: fit-content;
 `
 

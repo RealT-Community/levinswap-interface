@@ -10062,6 +10062,11 @@ levenary@^1.1.1:
   dependencies:
     leven "^3.1.0"
 
+levinswap-default-tokenlist@^2.0.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/levinswap-default-tokenlist/-/levinswap-default-tokenlist-2.2.1.tgz#4b58b3ab8d98e94c601044dc6ff697d77b713bb6"
+  integrity sha512-teQuEDt/eykgepXJg7GR2Q+2hYN+mhYaHEakxcPOPImWZ7xuP/Qij6D6cDP2apg/FuhSc/Z7aDFZaTMdQPt7iQ==
+
 levn@^0.3.0, levn@~0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/levn/-/levn-0.3.0.tgz#3b09924edf9f083c0490fdd4c0bc4421e04764ee"
@@ -13279,7 +13284,7 @@ regexpp@^2.0.1:
 regexpp@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-3.1.0.tgz#206d0ad0a5648cffbdb8ae46438f3dc51c9f78e2"
-  integrity sha512-ZOIzd8yVsQQA7j8GCSlPGXwg5PfmA1mrq0JP4nGhh54LaKN3xdai/vHUDu74pKwV8OxseMS65u2NImosQcSD0Q==
+  integrity sha512-ZOIzd8yVsQQA7j8GCSlPGXwg5PfmA1mrq0JP4nGhh54LaKN3ethereum/vHUDu74pKwV8OxseMS65u2NImosQcSD0Q==
 
 regexpu-core@^2.0.0:
   version "2.0.0"

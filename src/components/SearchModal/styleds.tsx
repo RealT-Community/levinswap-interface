@@ -12,6 +12,12 @@ export const ModalInfo = styled.div`
   user-select: none;
 `
 
+export const Checkbox = styled.input`
+  border: 1px solid ${({ theme }) => theme.red1};
+  height: 20px;
+  margin: 0;
+`
+
 export const FadedSpan = styled(RowFixed)`
   color: ${({ theme }) => theme.primary1};
   font-size: 14px;
@@ -20,6 +26,13 @@ export const FadedSpan = styled(RowFixed)`
 export const PaddedColumn = styled(AutoColumn)`
   padding: 20px;
   padding-bottom: 12px;
+`
+
+export const TextDot = styled.div`
+  height: 3px;
+  width: 3px;
+  background-color: ${({ theme }) => theme.text2};
+  border-radius: 50%;
 `
 
 export const MenuItem = styled(RowBetween)`
@@ -46,7 +59,7 @@ export const SearchInput = styled.input`
   background: none;
   border: none;
   outline: none;
-  border-radius: 20px;
+  border-radius: 5px;
   color: ${({ theme }) => theme.text1};
   border-style: solid;
   border: 1px solid ${({ theme }) => theme.bg3};

@@ -31,7 +31,7 @@ const PageWrapper = styled(AutoColumn)`
 
 const ProposalInfo = styled(AutoColumn)`
   border: 1px solid ${({ theme }) => theme.bg4};
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 1.5rem;
   position: relative;
   max-width: 640px;
@@ -130,10 +130,10 @@ export default function VotePage({
   const endDate: DateTime | undefined =
     proposalData && currentTimestamp && currentBlock
       ? DateTime.fromSeconds(
-          currentTimestamp
-            .add(BigNumber.from(AVERAGE_BLOCK_TIME_IN_SECS).mul(BigNumber.from(proposalData.endBlock - currentBlock)))
-            .toNumber()
-        )
+        currentTimestamp
+          .add(BigNumber.from(AVERAGE_BLOCK_TIME_IN_SECS).mul(BigNumber.from(proposalData.endBlock - currentBlock)))
+          .toNumber()
+      )
       : undefined
   const now: DateTime = DateTime.local()
 
@@ -190,8 +190,8 @@ export default function VotePage({
               {endDate && endDate < now
                 ? 'Voting ended ' + (endDate && endDate.toLocaleString(DateTime.DATETIME_FULL))
                 : proposalData
-                ? 'Voting ends approximately ' + (endDate && endDate.toLocaleString(DateTime.DATETIME_FULL))
-                : ''}
+                  ? 'Voting ends approximately ' + (endDate && endDate.toLocaleString(DateTime.DATETIME_FULL))
+                  : ''}
             </TYPE.main>
           </RowBetween>
           {proposalData && proposalData.status === 'active' && !showVotingButtons && (
@@ -212,7 +212,7 @@ export default function VotePage({
           <RowFixed style={{ width: '100%', gap: '12px' }}>
             <ButtonPrimary
               padding="8px"
-              borderRadius="8px"
+              borderRadius="5px"
               onClick={() => {
                 setSupport(true)
                 toggleVoteModal()
@@ -222,7 +222,7 @@ export default function VotePage({
             </ButtonPrimary>
             <ButtonPrimary
               padding="8px"
-              borderRadius="8px"
+              borderRadius="5px"
               onClick={() => {
                 setSupport(false)
                 toggleVoteModal()

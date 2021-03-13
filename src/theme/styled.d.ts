@@ -37,6 +37,7 @@ export interface Colors {
   primary3: Color
   primary4: Color
   primary5: Color
+  primary6: Color
 
   primaryText1: Color
 
@@ -52,6 +53,7 @@ export interface Colors {
   yellow1: Color
   yellow2: Color
   blue1: Color
+  grey1: Color
 }
 
 export interface Grids {
