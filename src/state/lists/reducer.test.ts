@@ -434,9 +434,7 @@ describe('list reducer', () => {
       })
 
       it('clears the current lists', () => {
-        expect(
-          store.getState().byUrl['']
-        ).toBeUndefined()
+        expect(store.getState().byUrl['']).toBeUndefined()
         expect(store.getState().byUrl['']).toBeUndefined()
       })
 
@@ -485,9 +483,7 @@ describe('list reducer', () => {
       })
 
       it('does not remove lists not in last initialized list of lists', () => {
-        expect(
-          store.getState().byUrl['']
-        ).toEqual({
+        expect(store.getState().byUrl['']).toEqual({
           error: null,
           current: STUB_TOKEN_LIST,
           loadingRequestId: null,

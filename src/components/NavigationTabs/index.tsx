@@ -70,7 +70,6 @@ const StyledNavLinkLiquidity = styled(NavLink).attrs({
   }
 `
 
-
 const ActiveText = styled.div`
   font-weight: 500;
   font-size: 20px;
@@ -85,16 +84,16 @@ const SwapMenuStyled = styled.div`
 `
 
 const RowStyled = styled.div`
-    display: flex;
-    align-items: center;
-    padding: 0px 15px 10px 15px;
-    position: ;
+  display: flex;
+  align-items: center;
+  padding: 0px 15px 10px 15px;
+  position: ;
 `
 
 const Row = styled.div`
-    display: flex;
-    justify-content: space-between;
-    height: 58px;
+  display: flex;
+  justify-content: space-between;
+  height: 58px;
 `
 
 export function SwapPoolTabs({ active }: { active: 'swap' | 'pool' }) {
@@ -137,7 +136,6 @@ export function AddRemoveTabs({ adding, creating }: { adding: boolean; creating:
           <StyledNavLinkLiquidity id={`swap-nav-link`} to={'/add/ETH'}>
             {t('+ Liquidity')}
           </StyledNavLinkLiquidity>
-
         </RowStyled>
         <RowStyled>
           <QuestionHelper

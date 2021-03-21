@@ -62,6 +62,5 @@ export default function Toggle({ toggle }: ToggleProps) {
         <StyledLightIcon />
       </StyledMenuButton>
     </StyledMenu>
-
   )
 }

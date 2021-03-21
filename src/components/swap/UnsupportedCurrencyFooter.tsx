@@ -51,8 +51,8 @@ export default function UnsupportedCurrencyFooter({
   const tokens =
     chainId && currencies
       ? currencies.map(currency => {
-        return wrappedCurrency(currency, chainId)
-      })
+          return wrappedCurrency(currency, chainId)
+        })
       : []
 
   const unsupportedTokens: { [address: string]: Token } = useUnsupportedTokens()

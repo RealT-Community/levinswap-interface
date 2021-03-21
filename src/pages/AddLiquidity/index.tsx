@@ -65,8 +65,8 @@ export default function AddLiquidity({
 
   const oneCurrencyIsWETH = Boolean(
     chainId &&
-    ((currencyA && currencyEquals(currencyA, WETH[chainId])) ||
-      (currencyB && currencyEquals(currencyB, WETH[chainId])))
+      ((currencyA && currencyEquals(currencyA, WETH[chainId])) ||
+        (currencyB && currencyEquals(currencyB, WETH[chainId])))
   )
 
   const toggleWalletModal = useWalletModalToggle() // toggle wallet when disconnected
@@ -271,8 +271,9 @@ export default function AddLiquidity({
     )
   }
 
-  const pendingText = `Supplying ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)} ${currencies[Field.CURRENCY_A]?.symbol
-    } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)} ${currencies[Field.CURRENCY_B]?.symbol}`
+  const pendingText = `Supplying ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)} ${
+    currencies[Field.CURRENCY_A]?.symbol
+  } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)} ${currencies[Field.CURRENCY_B]?.symbol}`
 
   const handleCurrencyASelect = useCallback(
     (currencyA: Currency) => {
@@ -358,23 +359,23 @@ export default function AddLiquidity({
   const isCreate = history.location.pathname.includes('/create')
 
   const TitleRow = styled(RowBetween)`
-  ${({ theme }) => theme.mediaWidth.upToSmall`
+    ${({ theme }) => theme.mediaWidth.upToSmall`
     flex-wrap: wrap;
     gap: 12px;
     width: 100%;
     flex-direction: column-reverse;
   `};
-`
+  `
 
   const EmptyProposals = styled.div`
-  border: 1px solid ${({ theme }) => theme.text4};
-  padding: 16px 12px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
+    border: 1px solid ${({ theme }) => theme.text4};
+    padding: 16px 12px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  `
 
   return (
     <>
@@ -522,7 +523,7 @@ export default function AddLiquidity({
                 <HideSmall>
                   <TYPE.mediumHeader style={{ marginTop: '0.5rem', justifySelf: 'flex-start' }}>
                     Your liquidity
-                </TYPE.mediumHeader>
+                  </TYPE.mediumHeader>
                 </HideSmall>
               </TitleRow>
 
@@ -530,7 +531,7 @@ export default function AddLiquidity({
                 <Card padding="40px">
                   <TYPE.body color={theme.text3} textAlign="center">
                     Connect to a wallet to view your liquidity.
-                </TYPE.body>
+                  </TYPE.body>
                 </Card>
               ) : v2IsLoading ? (
                 <EmptyProposals>
@@ -558,7 +559,7 @@ export default function AddLiquidity({
                 <EmptyProposals>
                   <TYPE.body color={theme.text3} textAlign="center">
                     No liquidity found.
-                </TYPE.body>
+                  </TYPE.body>
                 </EmptyProposals>
               )}
 
