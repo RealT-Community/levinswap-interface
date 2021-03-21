@@ -159,6 +159,14 @@ export function CurrencySearch({
   const inactiveTokens = useFoundOnInactiveList(debouncedQuery)
   const filteredInactiveTokens: Token[] = useSortedTokensByQuery(inactiveTokens, debouncedQuery)
 
+  const ManageCenterStyled = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-text: center;
+  `
+
   return (
     <ContentWrapper>
       <PaddedColumn gap="16px">
@@ -218,7 +226,7 @@ export function CurrencySearch({
         </Column>
       )}
       <Footer>
-        <Row>
+        <ManageCenterStyled>
           <ButtonText onClick={showManageView} color={theme.blue1} className="list-token-manage-button">
             <RowFixed>
               <IconWrapper size="16px" marginRight="6px">
@@ -227,7 +235,7 @@ export function CurrencySearch({
               <TYPE.main color={theme.blue1}>Manage</TYPE.main>
             </RowFixed>
           </ButtonText>
-        </Row>
+        </ManageCenterStyled>
       </Footer>
     </ContentWrapper>
   )

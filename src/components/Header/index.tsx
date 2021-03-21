@@ -1,5 +1,5 @@
 import { ChainId /*, TokenAmount */ } from '@levinswap/uniswap-sdk'
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { Text } from 'rebass'
 
 import styled from 'styled-components'
@@ -29,6 +29,9 @@ import { RampInstantSDK } from '@ramp-network/ramp-instant-sdk'
 
 import { RowBetween } from '../Row'
 import Toggle from '../Toggle_'
+import { LEVIN } from './../../constants/index'
+import { addTokenToMetamask } from './../../utils/AddTokenToMetamask'
+import Metamask from '../../assets/images/metamask.png'
 
 const HeaderFrame = styled.div`
   display: grid;
@@ -144,6 +147,27 @@ const Ramp = styled.div`
   }
 `
 
+const LevinToken = styled.div` 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: ${({ theme }) => theme.primary6};
+  color: ${({ theme }) => theme.primary2};
+  border: solid 1px transparent
+  padding: 8px 12px;
+  border-radius: 5px;  
+  white-space: nowrap;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.05s ease;
+
+  :hover {
+    cursor: pointer;
+    border: 1px solid #463e53;
+  }
+`
+
 // const UNIAmount = styled(AccountElement)`
 //   color: white;
 //   padding: 4px 8px;
@@ -175,7 +199,7 @@ const HideSmall = styled.span`
 
 const NetworkCard = styled(YellowCard)`
   border-radius: 5px;
-  padding: 8px 12px;
+  padding: 9px 12px;
   ${({ theme }) => theme.mediaWidth.upToSmall`
     margin: 0;
     margin-right: 0.5rem;
@@ -226,6 +250,9 @@ export default function Header() {
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
   const [isDark] = useDarkModeManager()
+
+  const { ethereum } = window
+  const handleAddLvn = useCallback(() => addTokenToMetamask(ethereum, LEVIN), [ethereum])
 
   const startRamp = () => {
     new RampInstantSDK({
@@ -281,6 +308,9 @@ export default function Header() {
               <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
             )}
           </HideSmall>
+          <LevinToken onClick={handleAddLvn}>
+            <img src={Metamask} alt="Metamask" style={{ width: '20px', height: '20px', marginRight: '10px' }} /> Levin
+          </LevinToken>
           <Ramp id={'ramp_btn'} onClick={startRamp}>
             Buy xDai
           </Ramp>

@@ -58,6 +58,7 @@
     "jazzicon": "^1.5.0",
     "lodash.flatmap": "^4.5.0",
     "luxon": "^1.25.0",
+    "@metamask/detect-provider": "^1.2.0",
     "multicodec": "^2.0.0",
     "multihashes": "^3.0.1",
     "node-vibrant": "^3.1.5",
@@ -120,6 +121,6 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@ramp-network/ramp-instant-sdk": "^2.3.1",
-    "levinswap-default-tokenlist": "^2.0.0"
+    "levinswap-default-token-list": "^2.3.2"
   }
 }

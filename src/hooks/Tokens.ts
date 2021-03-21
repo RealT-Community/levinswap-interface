@@ -1,4 +1,4 @@
-import { TokenAddressMap, useDefaultTokenList, useUnsupportedTokenList } from './../state/lists/hooks'
+import { TokenAddressMap, /*useDefaultTokenList,*/ useUnsupportedTokenList } from './../state/lists/hooks'
 import { parseBytes32String } from '@ethersproject/strings'
 import { Currency, ETHER, Token, currencyEquals } from '@levinswap/uniswap-sdk'
 import { useMemo } from 'react'
@@ -46,10 +46,10 @@ function useTokensFromMap(tokenMap: TokenAddressMap, includeUserAdded: boolean):
   }, [chainId, userAddedTokens, tokenMap, includeUserAdded])
 }
 
-export function useDefaultTokens(): { [address: string]: Token } {
+/*export function useDefaultTokens(): { [address: string]: Token } {
   const defaultList = useDefaultTokenList()
   return useTokensFromMap(defaultList, false)
-}
+}*/
 
 export function useAllTokens(): { [address: string]: Token } {
   const allTokens = useCombinedActiveList()

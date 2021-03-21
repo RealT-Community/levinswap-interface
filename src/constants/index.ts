@@ -34,7 +34,7 @@ export const STAKE = new Token(
 
 export const LEVIN = new Token(
   ChainId.XDAI,
-  '0x64e8a115ec254a6a5949dbc5801a8ccf3ae4f72f',
+  '0x1698cD22278ef6E7c0DF45a8dEA72EDbeA9E42aa',
   18,
   'LEVIN',
   'Levin Token on xDai'

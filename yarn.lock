@@ -1967,6 +1967,11 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
+"@metamask/detect-provider@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@metamask/detect-provider/-/detect-provider-1.2.0.tgz#3667a7531f2a682e3c3a43eaf3a1958bdb42a696"
+  integrity sha512-ocA76vt+8D0thgXZ7LxFPyqw3H7988qblgzddTDA6B8a/yU0uKV42QR/DhA+Jh11rJjxW0jKvwb5htA6krNZDQ==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -10062,10 +10067,10 @@ levenary@^1.1.1:
   dependencies:
     leven "^3.1.0"
 
-levinswap-default-tokenlist@^2.0.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/levinswap-default-tokenlist/-/levinswap-default-tokenlist-2.2.1.tgz#4b58b3ab8d98e94c601044dc6ff697d77b713bb6"
-  integrity sha512-teQuEDt/eykgepXJg7GR2Q+2hYN+mhYaHEakxcPOPImWZ7xuP/Qij6D6cDP2apg/FuhSc/Z7aDFZaTMdQPt7iQ==
+levinswap-default-token-list@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/levinswap-default-token-list/-/levinswap-default-token-list-2.3.2.tgz#3019b14e892bb3961191aca77ed8432f9a0a84ca"
+  integrity "sha1-MBmxTokrs5YRkaynfthDL5oKhMo= sha512-fx/CwgcPNTSrGO9eNuVyF8MErRC6B2qiK4CJaOjUN5fSX7PfW1iSW7Y4BjPToJyUrQhZ/Ag74Z+cojYU0MrC6A=="
 
 levn@^0.3.0, levn@~0.3.0:
   version "0.3.0"
@@ -13284,7 +13289,7 @@ regexpp@^2.0.1:
 regexpp@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/regexpp/-/regexpp-3.1.0.tgz#206d0ad0a5648cffbdb8ae46438f3dc51c9f78e2"
-  integrity sha512-ZOIzd8yVsQQA7j8GCSlPGXwg5PfmA1mrq0JP4nGhh54LaKN3ethereum/vHUDu74pKwV8OxseMS65u2NImosQcSD0Q==
+  integrity "sha1-IG0K0KVkjP+9uK5GQ489xRyfeOI= sha512-ZOIzd8yVsQQA7j8GCSlPGXwg5PfmA1mrq0JP4nGhh54LaKN3xdai/vHUDu74pKwV8OxseMS65u2NImosQcSD0Q=="
 
 regexpu-core@^2.0.0:
   version "2.0.0"
