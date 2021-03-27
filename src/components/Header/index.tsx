@@ -308,6 +308,9 @@ export default function Header() {
               <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
             )}
           </HideSmall>
+          <LevinToken onClick={() => window.open("https://farm.levinswap.org", "_blank")}>
+            <span role="img" aria-label="farm">🌾</span> Farm
+          </LevinToken>
           <LevinToken onClick={handleAddLvn}>
             <img src={Metamask} alt="Metamask" style={{ width: '20px', height: '20px', marginRight: '10px' }} /> Levin
           </LevinToken>
