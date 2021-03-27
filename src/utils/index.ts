@@ -33,7 +33,7 @@ export function getEtherscanLink(
 ): string {
   const prefix =
     chainId !== 100
-      ? `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
+      ? `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}blockscout.com/poa/xdai`
       : `https://blockscout.com/poa/xdai`
 
   switch (type) {
