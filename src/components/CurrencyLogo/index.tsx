@@ -7,8 +7,8 @@ import useHttpLocations from '../../hooks/useHttpLocations'
 import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
 
-const getTokenLogoURL = (address: string) =>
-  `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/xdai/assets/${address}/logo.png`
+export const getTokenLogoURL = (address: string) =>
+  `https://raw.githubusercontent.com/trustwallet/assets/master/dapps/xdai/assets/${address}/logo.png`
 
 const StyledxDaiLogo = styled.img<{ size: string }>`
   width: ${({ size }) => size};
