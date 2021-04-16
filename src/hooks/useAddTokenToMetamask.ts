@@ -24,7 +24,7 @@ export default function useAddTokenToMetamask(
             options: {
               address: token.address,
               symbol: token.symbol,
-              decimals: token.decimals,
+              decimals: token.decimals
             }
           }
         })
