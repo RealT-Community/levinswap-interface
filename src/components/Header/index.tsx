@@ -316,7 +316,7 @@ export default function Header() {
           </LevinToken>
           <LevinToken onClick={() => window.open('https://stake.levinswap.org', '_blank')}>
             <span role="img" aria-label="stake">
-            🍸
+              🍸
             </span>{' '}
             Stake
           </LevinToken>
