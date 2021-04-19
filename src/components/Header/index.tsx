@@ -314,6 +314,12 @@ export default function Header() {
             </span>{' '}
             Farm
           </LevinToken>
+          <LevinToken onClick={() => window.open('https://stake.levinswap.org', '_blank')}>
+            <span role="img" aria-label="stake">
+            🍸
+            </span>{' '}
+            Stake
+          </LevinToken>
           <LevinToken onClick={handleAddLvn}>
             <img src={Metamask} alt="Metamask" style={{ width: '20px', height: '20px', marginRight: '10px' }} /> Levin
           </LevinToken>
