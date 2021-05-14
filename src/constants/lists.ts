@@ -1,7 +1,7 @@
 // used to mark unsupported tokens, these are hosted lists of unsupported tokens
 
 const LEVINSWAP_LIST =
-  'https://ipfs.io/ipfs/QmUWxthidUYXUJ2kiZLLPxkMKYDAinnpA591R3SRN6wufs?filename=levinswap-default.tokenlist.json'
+  'https://ipfs.io/ipfs/QmUmN7Be3LLHiEwcVZDm6WsPjcTddWsc6C7hrLCmPzsanv?filename=levinswap-default.tokenlist.json'
 const LEVINSWAP_STABLECOIN_LIST =
   'https://ipfs.io/ipfs/QmWrhnRTCQ8CgSoNmHV6WsneLLhErouD4fQPpSaqhsibpD?filename=levinswap-stablecoin-tokenlist.json'
 const REALT_LIST = 'https://api.realt.community/v1/tokenList'
