@@ -21,7 +21,7 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
   REALT_LIST,
   REN_LIST,
   SYNTHETIX_LST,
-  BSC_LIST,
+  BSC_LIST
 ]
 
 // default lists to be 'active' aka searched across
