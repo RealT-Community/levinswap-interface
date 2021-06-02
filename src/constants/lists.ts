@@ -9,8 +9,8 @@ const REN_LIST =
   'https://ipfs.io/ipfs/QmSqYWWdzfngm57int8AesJr1APRBBYxC8knmYC9rN4ECj?filename=ren-default.tokenlist.json'
 const SYNTHETIX_LST =
   'https://ipfs.io/ipfs/QmYeWjmKW4tQ6JfCG9XUkVa9CFBAUY36Z1W9w1iM6Bx4ne?filename=synthetix-default.tokenlist.json'
-/*const BSC_LIST =
-  'https://ipfs.io/ipfs/QmcT2RnZ2tJcpfxaruy1EkKAF6aGCRrVsNFfn5oSCQLPQJ?filename=bsc-default.tokenlist.json'*/
+const BSC_LIST =
+  'https://ipfs.io/ipfs/QmcT2RnZ2tJcpfxaruy1EkKAF6aGCRrVsNFfn5oSCQLPQJ?filename=bsc-default.tokenlist.json'
 
 export const UNSUPPORTED_LIST_URLS: string[] = []
 
@@ -21,7 +21,7 @@ export const DEFAULT_LIST_OF_LISTS: string[] = [
   REALT_LIST,
   REN_LIST,
   SYNTHETIX_LST,
-  BSC_LIST
+  BSC_LIST,
 ]
 
 // default lists to be 'active' aka searched across
