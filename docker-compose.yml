@@ -1,0 +1,17 @@
+version: '3.2'
+
+services:
+  web:
+    container_name: levinswap-app
+    build: .
+    networks:
+      - traefik-realt
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.levinswap-app.rule=Host(`app.levinswap.realt.community`)"
+      - "traefik.http.routers.levinswap-app.entrypoints=websecure"
+    restart: always
+
+networks:
+  traefik-realt:
+    external: true
