@@ -85,7 +85,7 @@ const MenuItem = styled(ExternalLink)`
   }
 `
 
-const CODE_LINK = 'https://github.com/Levinswap/levinswap-interface'
+const CODE_LINK = 'https://github.com/RealT-Community/levinswap-interface'
 
 export default function Menu() {
   // const { account } = useActiveWeb3React()
@@ -105,11 +105,11 @@ export default function Menu() {
 
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://levinswap.org/">
+          <MenuItem id="link" href="https://levinswap.realt.community/">
             <Info size={14} />
             About
           </MenuItem>
-          <MenuItem id="link" href="https://wiki.levinswap.org/">
+          <MenuItem id="link" href="https://wiki.levinswap.realt.community/">
             <BookOpen size={14} />
             Docs
           </MenuItem>
@@ -121,7 +121,7 @@ export default function Menu() {
             <MessageCircle size={14} />
             Discord
           </MenuItem>
-          <MenuItem id="link" href="https://info.levinswap.org/">
+          <MenuItem id="link" href="https://info.levinswap.realt.community/">
             <PieChart size={14} />
             Analytics
           </MenuItem>
