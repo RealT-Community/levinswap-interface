@@ -6,17 +6,17 @@
 
 An open source interface for Levinswap -- a protocol for decentralized exchange of xdai and ethereum bridged tokens.
 
-- Website: [levinswap.org](https://levinswap.org/)
-- Interface: [app.levinswap.org](https://app.levinswap.org)
-- Docs: [levinswap.org/docs/](https://wiki.levinswap.org/levinswap-wiki/)
+- Website: [levinswap.realt.community](https://levinswap.realt.community/)
+- Interface: [app.levinswap.realt.community](https://app.levinswap.realt.community)
+- Docs: [levinswap.realt.community/docs/](https://wiki.levinswap.realt.community/levinswap-wiki/)
 - Twitter: [@Levinswap](https://twitter.com/Levinswap)
-- Email: [contact@levinswap.org](mailto:contact@levinswap.org)
+- Email: [contact@levinswap.realt.community](mailto:contact@levinswap.realt.community)
 
 ## Accessing the Levinswap Interface
 
 To access the Levinswap Interface, use an IPFS gateway link from the
 [latest release](https://github.com/Levinswap/Levinswap-interface/releases/latest),
-or visit [app.levinswap.org](https://app.levinswap.org).
+or visit [app.levinswap.realt.community](https://app.levinswap.realt.community).
 
 ## Listing a token
 
@@ -47,7 +47,7 @@ To have the interface default to a different network when a wallet is not connec
 3. Change `REACT_APP_NETWORK_URL` to e.g. `"https://{YOUR_NETWORK_ID}.infura.io/v3/{YOUR_INFURA_KEY}"`
 
 Note that the interface only works on testnets where both
-[Levinswap V2](https://levinswap.org/docs/v2/smart-contracts/factory/) and
+[Levinswap V2](https://levinswap.realt.community/docs/v2/smart-contracts/factory/) and
 [multicall](https://github.com/makerdao/multicall) are deployed.
 The interface will not work on other networks.
 

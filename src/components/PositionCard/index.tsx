@@ -306,7 +306,7 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
             <ButtonSecondary padding="8px" borderRadius="5px">
               <ExternalLink
                 style={{ width: '100%', textAlign: 'center' }}
-                href={`https://info.levinswap.org/account/${account}`}
+                href={`https://info.levinswap.realt.community/account/${account}`}
               >
                 View accrued fees and analytics<span style={{ fontSize: '11px' }}>↗</span>
               </ExternalLink>

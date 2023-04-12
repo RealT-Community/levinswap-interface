@@ -71,7 +71,7 @@ export default function Earn() {
               </RowBetween>{' '}
               <ExternalLink
                 style={{ color: 'white', textDecoration: 'underline' }}
-                href="https://levinswap.org/blog/uni/"
+                href="https://levinswap.realt.community/blog/uni/"
                 target="_blank"
               >
                 <TYPE.white fontSize={14}>Read more about UNI</TYPE.white>
