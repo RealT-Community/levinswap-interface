@@ -308,13 +308,13 @@ export default function Header() {
               <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
             )}
           </HideSmall>
-          <LevinToken onClick={() => window.open('https://farm.levinswap.org', '_blank')}>
+          <LevinToken onClick={() => window.open('https://farm.levinswap.realt.community', '_blank')}>
             <span role="img" aria-label="farm">
               🌾
             </span>{' '}
             Farm
           </LevinToken>
-          <LevinToken onClick={() => window.open('https://stake.levinswap.org', '_blank')}>
+          <LevinToken onClick={() => window.open('https://stake.levinswap.realt.community', '_blank')}>
             <span role="img" aria-label="stake">
               🍸
             </span>{' '}
