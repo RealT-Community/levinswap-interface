@@ -8,7 +8,7 @@ import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
 
 export const getTokenLogoURL = (address: string) =>
-  `https://raw.githubusercontent.com/trustwallet/assets/master/dapps/xdai/assets/${address}/logo.png`
+  `./images/tokens/${address}.png`
 
 const StyledxDaiLogo = styled.img<{ size: string }>`
   width: ${({ size }) => size};
