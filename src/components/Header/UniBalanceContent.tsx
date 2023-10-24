@@ -9,7 +9,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { useMerkleDistributorContract } from '../../hooks/useContract'
 import useCurrentBlockTimestamp from '../../hooks/useCurrentBlockTimestamp'
 import { useTotalUniEarned } from '../../state/stake/hooks'
-import { useAggregateUniBalance, useTokenBalance } from '../../state/wallet/hooks'
+import { /* useAggregateUniBalance, */ useTokenBalance } from '../../state/wallet/hooks'
 import { ExternalLink, StyledInternalLink, TYPE, UniTokenAnimated } from '../../theme'
 import { computeUniCirculation } from '../../utils/computeUniCirculation'
 import useUSDCPrice from '../../utils/useUSDCPrice'
@@ -44,7 +44,8 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
   const { account, chainId } = useActiveWeb3React()
   const uni = chainId ? UNI[chainId] : undefined
 
-  const total = useAggregateUniBalance()
+  // const total = useAggregateUniBalance()
+  const total = 0
   const uniBalance: TokenAmount | undefined = useTokenBalance(account ?? undefined, uni)
   const uniToClaim: TokenAmount | undefined = useTotalUniEarned()
 
@@ -78,7 +79,8 @@ export default function UniBalanceContent({ setShowUniBalanceModal }: { setShowU
               <AutoColumn gap="md" justify="center">
                 <UniTokenAnimated width="48px" src={tokenLogo} />{' '}
                 <TYPE.white fontSize={48} fontWeight={600} color="white">
-                  {total?.toFixed(2, { groupSeparator: ',' })}
+                  {/* {total?.toFixed(2, { groupSeparator: ',' })} */}
+                  {total?.toFixed(2)}
                 </TYPE.white>
               </AutoColumn>
               <AutoColumn gap="md">

@@ -17,7 +17,7 @@ import Menu from '../Menu'
 
 import Row, { RowFixed } from '../Row'
 import Web3Status from '../Web3Status'
-import ClaimModal from '../claim/ClaimModal'
+// import ClaimModal from '../claim/ClaimModal'
 // import { useToggleSelfClaimModal, useShowClaimPopup } from '../../state/application/hooks'
 // import { useUserHasAvailableClaim } from '../../state/claim/hooks'
 // import { useUserHasSubmittedClaim } from '../../state/transactions/hooks'
@@ -282,7 +282,7 @@ export default function Header() {
   const [darkMode, toggleDarkMode] = useDarkModeManager()
   return (
     <HeaderFrame>
-      <ClaimModal />
+      {/* <ClaimModal /> */}
       <Modal isOpen={showUniBalanceModal} onDismiss={() => setShowUniBalanceModal(false)}>
         <UniBalanceContent setShowUniBalanceModal={setShowUniBalanceModal} />
       </Modal>
