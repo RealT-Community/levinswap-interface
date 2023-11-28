@@ -1,6 +1,7 @@
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core'
-import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
+// import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
+// import { WalletConnectV2Connector } from '../utils/walletconnectV2Connector';
 import React, { useEffect, useState } from 'react'
 import { isMobile } from 'react-device-detect'
 import ReactGA from 'react-ga'
@@ -182,9 +183,12 @@ export default function WalletModal({
     setWalletView(WALLET_VIEWS.PENDING)
 
     // if the connector is walletconnect and the user has already tried to connect, manually reset the connector
-    if (connector instanceof WalletConnectConnector && connector.walletConnectProvider?.wc?.uri) {
-      connector.walletConnectProvider = undefined
-    }
+    // if (connector instanceof WalletConnectConnector && connector.walletConnectProvider?.wc?.uri) {
+    //   connector.walletConnectProvider = undefined
+    // }
+    // if (connector instanceof WalletConnectV2Connector && connector.walletConnectV2Provider?.wc?.uri) {
+    //   connector.walletConnectV2Provider = undefined
+    // }
 
     connector &&
       activate(connector, undefined, true).catch(error => {

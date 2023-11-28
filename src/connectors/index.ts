@@ -1,15 +1,15 @@
 import { Web3Provider } from '@ethersproject/providers'
 import { InjectedConnector } from '@web3-react/injected-connector'
-import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
+import { WalletConnectV2Connector } from '../utils/walletconnectV2Connector';
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 import { PortisConnector } from '@web3-react/portis-connector'
-
 import { FortmaticConnector } from './Fortmatic'
 import { NetworkConnector } from './NetworkConnector'
 
 const NETWORK_URL = process.env.REACT_APP_NETWORK_URL
 const FORMATIC_KEY = process.env.REACT_APP_FORTMATIC_KEY
 const PORTIS_ID = process.env.REACT_APP_PORTIS_ID
+const WALLET_CONNECT_V2_PROJECT_ID = process.env.REACT_APP_WALLET_CONNECT_V2_PROJECT_ID ?? ''
 
 export const NETWORK_CHAIN_ID: number = parseInt(process.env.REACT_APP_CHAIN_ID ?? '1')
 
@@ -30,11 +30,13 @@ export const injected = new InjectedConnector({
   supportedChainIds: [100]
 })
 
-export const walletconnect = new WalletConnectConnector({
-  rpc: { 100: 'https://rpc.xdaichain.com/' },
-  bridge: 'https://bridge.walletconnect.org/',
-  qrcode: true,
-  pollingInterval: 15000
+export const walletConnectV2 = new WalletConnectV2Connector({
+  projectId: WALLET_CONNECT_V2_PROJECT_ID,
+  showQrModal: true,
+  chains: [100],
+  rpcMap: {
+    ['100']: "https://rpc.gnosischain.com",
+  },
 })
 
 // mainnet only

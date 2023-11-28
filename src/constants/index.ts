@@ -1,7 +1,7 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '@levinswap/uniswap-sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
-import { injected, walletconnect } from '../connectors'
+import { injected, walletConnectV2 } from '../connectors'
 
 export const ROUTER_ADDRESS = '0xb18d4f69627F8320619A696202Ad2C430CeF7C53'
 
@@ -135,9 +135,9 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     href: null,
     color: '#E8831D'
   },
-  WALLET_CONNECT: {
-    connector: walletconnect,
-    name: 'WalletConnect',
+  WALLET_CONNECT_V2: {
+    connector: walletConnectV2,
+    name: 'WalletConnectV2',
     iconName: 'walletConnectIcon.svg',
     description: 'Connect to Trust Wallet, Rainbow Wallet and more...',
     href: null,
