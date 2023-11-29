@@ -6,7 +6,7 @@ import { SwapPoolTabs } from '../../components/NavigationTabs'
 import FullPositionCard from '../../components/PositionCard'
 import { useUserHasLiquidityInAllTokens } from '../../data/V1'
 import { useTokenBalancesWithLoadingIndicator } from '../../state/wallet/hooks'
-import { StyledInternalLink, ExternalLink, TYPE, HideSmall } from '../../theme'
+import { StyledInternalLink, TYPE, HideSmall } from '../../theme'
 import { Text } from 'rebass'
 import Card from '../../components/Card'
 import { RowBetween } from '../../components/Row'
@@ -16,7 +16,6 @@ import { useActiveWeb3React } from '../../hooks'
 import { usePairs } from '../../data/Reserves'
 import { toV2LiquidityToken, useTrackedTokenPairs } from '../../state/user/hooks'
 import { Dots } from '../../components/swap/styleds'
-import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
 import { useStakingInfo } from '../../state/stake/hooks'
 import { BIG_INT_ZERO } from '../../constants'
 
@@ -25,10 +24,10 @@ const PageWrapper = styled(AutoColumn)`
   width: 100%;
 `
 
-const VoteCard = styled(DataCard)`
-  background: radial-gradient(76.02% 75.41% at 1.84% 0%, #d9b252 0%, #000000 100%);
-  overflow: hidden;
-`
+// const VoteCard = styled(DataCard)`
+//   background: radial-gradient(76.02% 75.41% at 1.84% 0%, #d9b252 0%, #000000 100%);
+//   overflow: hidden;
+// `
 
 const TitleRow = styled(RowBetween)`
   ${({ theme }) => theme.mediaWidth.upToSmall`
@@ -102,7 +101,7 @@ export default function Pool() {
     <>
       <PageWrapper>
         <SwapPoolTabs active={'pool'} />
-        <VoteCard>
+        {/* <VoteCard>
           <CardBGImage />
           <CardNoise />
           <CardSection>
@@ -126,7 +125,7 @@ export default function Pool() {
           </CardSection>
           <CardBGImage />
           <CardNoise />
-        </VoteCard>
+        </VoteCard> */}
 
         <AutoColumn gap="lg" justify="center">
           <AutoColumn gap="lg" style={{ width: '100%' }}>

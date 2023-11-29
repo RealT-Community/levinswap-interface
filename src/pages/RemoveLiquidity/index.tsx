@@ -24,7 +24,6 @@ import { ROUTER_ADDRESS } from '../../constants'
 import { useActiveWeb3React } from '../../hooks'
 import { useCurrency } from '../../hooks/Tokens'
 import { usePairContract } from '../../hooks/useContract'
-import useIsArgentWallet from '../../hooks/useIsArgentWallet'
 import useTransactionDeadline from '../../hooks/useTransactionDeadline'
 
 import { useTransactionAdder } from '../../state/transactions/hooks'
@@ -102,16 +101,10 @@ export default function RemoveLiquidity({
   const [signatureData, setSignatureData] = useState<{ v: number; r: string; s: string; deadline: number } | null>(null)
   const [approval, approveCallback] = useApproveCallback(parsedAmounts[Field.LIQUIDITY], ROUTER_ADDRESS)
 
-  const isArgentWallet = useIsArgentWallet()
-
   async function onAttemptToApprove() {
     if (!pairContract || !pair || !library || !deadline) throw new Error('missing dependencies')
     const liquidityAmount = parsedAmounts[Field.LIQUIDITY]
     if (!liquidityAmount) throw new Error('missing liquidity amount')
-
-    if (isArgentWallet) {
-      return approveCallback()
-    }
 
     // try to gather a signature for permission
     // const nonce = await pairContract.nonces(account)

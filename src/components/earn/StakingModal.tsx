@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react'
-import useIsArgentWallet from '../../hooks/useIsArgentWallet'
 import useTransactionDeadline from '../../hooks/useTransactionDeadline'
 import Modal from '../Modal'
 import { AutoColumn } from '../Column'
@@ -78,7 +77,6 @@ export default function StakingModal({ isOpen, onDismiss, stakingInfo, userLiqui
   const [signatureData, setSignatureData] = useState<{ v: number; r: string; s: string; deadline: number } | null>(null)
   const [approval, approveCallback] = useApproveCallback(parsedAmount, stakingInfo.stakingRewardAddress)
 
-  const isArgentWallet = useIsArgentWallet()
   const stakingContract = useStakingContract(stakingInfo.stakingRewardAddress)
   async function onStake() {
     setAttempting(true)
@@ -129,10 +127,6 @@ export default function StakingModal({ isOpen, onDismiss, stakingInfo, userLiqui
     if (!pairContract || !library || !deadline) throw new Error('missing dependencies')
     const liquidityAmount = parsedAmount
     if (!liquidityAmount) throw new Error('missing liquidity amount')
-
-    if (isArgentWallet) {
-      return approveCallback()
-    }
 
     // try to gather a signature for permission
     const nonce = await pairContract.nonces(account)
