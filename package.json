@@ -24,7 +24,6 @@
     "@types/react-window": "^1.8.2",
     "@types/rebass": "^4.0.5",
     "@types/styled-components": "^5.1.0",
-    "@types/testing-library__cypress": "^5.0.5",
     "@types/wcag-contrast": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
@@ -35,15 +34,11 @@
     "@uniswap/v2-core": "1.0.0",
     "@uniswap/v2-periphery": "^1.1.0-beta.0",
     "@web3-react/core": "^6.0.9",
-    "@web3-react/fortmatic-connector": "^6.0.9",
     "@web3-react/injected-connector": "^6.0.7",
-    "@web3-react/portis-connector": "^6.0.9",
     "@web3-react/walletconnect-connector": "^6.1.1",
-    "@web3-react/walletlink-connector": "^6.0.9",
     "ajv": "^6.12.3",
     "cids": "^1.0.0",
     "copy-to-clipboard": "^3.2.0",
-    "cross-env": "^7.0.2",
     "cypress": "^4.11.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
@@ -58,7 +53,6 @@
     "jazzicon": "^1.5.0",
     "lodash.flatmap": "^4.5.0",
     "luxon": "^1.25.0",
-    "@metamask/detect-provider": "^1.2.0",
     "multicodec": "^2.0.0",
     "multihashes": "^3.0.1",
     "node-vibrant": "^3.1.5",
@@ -86,7 +80,7 @@
     "serve": "^11.3.0",
     "start-server-and-test": "^1.11.0",
     "styled-components": "^4.2.0",
-    "typescript": "^3.8.3",
+    "typescript": "^3.8.0",
     "use-count-up": "^2.2.5",
     "wcag-contrast": "^3.0.0"
   },
@@ -121,6 +115,6 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@ramp-network/ramp-instant-sdk": "^2.3.1",
-    "levinswap-default-token-list": "^2.3.2"
+    "depcheck": "^1.4.7"
   }
 }
