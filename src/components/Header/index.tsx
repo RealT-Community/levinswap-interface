@@ -1,5 +1,5 @@
 import { ChainId /*, TokenAmount */ } from '@levinswap/uniswap-sdk'
-import React, { useState, useCallback } from 'react'
+import React, { useCallback } from 'react'
 import { Text } from 'rebass'
 
 import styled from 'styled-components'
@@ -22,8 +22,7 @@ import Web3Status from '../Web3Status'
 // import { useUserHasAvailableClaim } from '../../state/claim/hooks'
 // import { useUserHasSubmittedClaim } from '../../state/transactions/hooks'
 // import { Dots } from '../swap/styleds'
-import Modal from '../Modal'
-import UniBalanceContent from './UniBalanceContent'
+// import Modal from '../Modal'
 // import usePrevious from '../../hooks/usePrevious'
 import { RampInstantSDK } from '@ramp-network/ramp-instant-sdk'
 
@@ -274,7 +273,6 @@ export default function Header() {
 
   // const aggregateBalance: TokenAmount | undefined = useAggregateUniBalance()
 
-  const [showUniBalanceModal, setShowUniBalanceModal] = useState(false)
   // const showClaimPopup = useShowClaimPopup()
 
   // const countUpValue = aggregateBalance?.toFixed(0) ?? '0'
@@ -283,9 +281,9 @@ export default function Header() {
   return (
     <HeaderFrame>
       {/* <ClaimModal /> */}
-      <Modal isOpen={showUniBalanceModal} onDismiss={() => setShowUniBalanceModal(false)}>
+      {/* <Modal isOpen={showUniBalanceModal} onDismiss={() => setShowUniBalanceModal(false)}>
         <UniBalanceContent setShowUniBalanceModal={setShowUniBalanceModal} />
-      </Modal>
+      </Modal> */}
       <HeaderRow>
         <Title href=".">
           <UniIcon>

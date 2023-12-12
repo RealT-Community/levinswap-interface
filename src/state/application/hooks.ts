@@ -47,17 +47,9 @@ export function useToggleSettingsMenu(): () => void {
 //   return useToggleModal(ApplicationModal.CLAIM_POPUP)
 // }
 
-export function useToggleSelfClaimModal(): () => void {
-  return useToggleModal(ApplicationModal.SELF_CLAIM)
-}
-
-export function useToggleDelegateModal(): () => void {
-  return useToggleModal(ApplicationModal.DELEGATE)
-}
-
-export function useToggleVoteModal(): () => void {
-  return useToggleModal(ApplicationModal.VOTE)
-}
+// export function useToggleSelfClaimModal(): () => void {
+//   return useToggleModal(ApplicationModal.SELF_CLAIM)
+// }
 
 // returns a function that allows adding a popup
 export function useAddPopup(): (content: PopupContent, key?: string) => void {

@@ -8,7 +8,7 @@ An open source interface for Levinswap -- a protocol for decentralized exchange 
 
 - Website: [levinswap.realt.community](https://levinswap.realt.community/)
 - Interface: [app.levinswap.realt.community](https://app.levinswap.realt.community)
-- Docs: [levinswap.realt.community/docs/](https://wiki.levinswap.realt.community/levinswap-wiki/)
+- Docs: [community-realt.gitbook.io/tuto-community/](https://community-realt.gitbook.io/tuto-community/)
 - Twitter: [@Levinswap](https://twitter.com/Levinswap)
 - Email: [contact@levinswap.realt.community](mailto:contact@levinswap.realt.community)
 
