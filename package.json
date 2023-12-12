@@ -13,7 +13,7 @@
     "@types/jest": "^25.2.1",
     "@types/lodash.flatmap": "^4.5.6",
     "@types/multicodec": "^1.0.0",
-    "@types/node": "^13.13.5",
+    "@types/node": "^13.13.52",
     "@types/qs": "^6.9.2",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
@@ -75,7 +75,7 @@
     "serve": "^11.3.0",
     "start-server-and-test": "^1.11.0",
     "styled-components": "^4.2.0",
-    "typescript": "^3.9.9",
+    "typescript": "^3.9.10",
     "wcag-contrast": "^3.0.0"
   },
   "resolutions": {
