@@ -8,7 +8,6 @@ import { tryParseAmount } from '../swap/hooks'
 import useCurrentBlockTimestamp from 'hooks/useCurrentBlockTimestamp'
 
 export const STAKING_GENESIS = 1600387200
-
 export const REWARDS_DURATION_DAYS = 60
 
 // TODO add staking rewards addresses here
@@ -54,7 +53,7 @@ export interface StakingInfo {
   ) => TokenAmount
 }
 
-// gets the staking info from the network for the active chain id
+// // gets the staking info from the network for the active chain id
 export function useStakingInfo(pairToFilterBy?: Pair | null): StakingInfo[] {
   const { chainId, account } = useActiveWeb3React()
 
