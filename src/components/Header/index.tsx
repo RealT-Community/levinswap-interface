@@ -24,13 +24,14 @@ import Web3Status from '../Web3Status'
 // import { Dots } from '../swap/styleds'
 // import Modal from '../Modal'
 // import usePrevious from '../../hooks/usePrevious'
-import { RampInstantSDK } from '@ramp-network/ramp-instant-sdk'
 
 import { RowBetween } from '../Row'
 import Toggle from '../Toggle_'
 import { LEVIN } from './../../constants/index'
 import { addTokenToMetamask } from './../../utils/AddTokenToMetamask'
 import Metamask from '../../assets/images/metamask.png'
+
+declare function showMtpModal(options: any): void;
 
 const HeaderFrame = styled.div`
   display: grid;
@@ -253,16 +254,33 @@ export default function Header() {
   const { ethereum } = window
   const handleAddLvn = useCallback(() => addTokenToMetamask(ethereum, LEVIN), [ethereum])
 
-  const startRamp = () => {
-    new RampInstantSDK({
-      hostAppName: 'Levinswap',
-      hostLogoUrl: 'https://ipfs.io/ipfs/QmVEppJVho5LbRRkX375DNxjUtnw2pjZqTNbpKypLwRipu?filename=512x512.png',
-      swapAsset: 'XDAI',
-      hostApiKey: 'vqr2vvudpondpce26c7mye27ge6b67v29ezn3fxt',
-      variant: 'auto'
-    })
-      .on('*', event => console.log(event))
-      .show()
+  const loadMtp = () => {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = "https://widget.mtpelerin.com/mtp-widget.js";
+      script.async = true;
+  
+      script.onload = resolve; // Appelé lorsque le script est chargé
+      script.onerror = reject; // Appelé en cas d'erreur de chargement du script
+  
+      document.body.appendChild(script);
+    });
+  }
+  
+  const startMtp = async () => {
+    try {
+      await loadMtp(); // Attend que le script soit chargé
+      showMtpModal({
+        lang: 'en',
+        _ctkn: 'b2c16dab-0823-4447-b913-3e1cc1f60ab0',
+        type: 'popup',
+        tabs: 'buy,sell,swap',
+        rfr: 'uogVuVxx',
+        net: 'xdai_mainnet',
+      });
+    } catch (error) {
+      console.error("Erreur lors du chargement du script MTP:", error);
+    }
   }
 
   // const toggleClaimModal = useToggleSelfClaimModal()
@@ -321,7 +339,7 @@ export default function Header() {
           <LevinToken onClick={handleAddLvn}>
             <img src={Metamask} alt="Metamask" style={{ width: '20px', height: '20px', marginRight: '10px' }} /> Levin
           </LevinToken>
-          <Ramp id={'ramp_btn'} onClick={startRamp}>
+          <Ramp id={'ramp_btn'} onClick={startMtp}>
             Buy xDai
           </Ramp>
           {/* {availableClaim && !showClaimPopup && (
