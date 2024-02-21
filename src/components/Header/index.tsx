@@ -276,7 +276,15 @@ export default function Header() {
         type: 'popup',
         tabs: 'buy,sell,swap',
         rfr: 'uogVuVxx',
-        net: 'xdai_mainnet',
+        // net: 'xdai_mainnet',
+        bsc: 'EUR',
+        bdc: 'XDAI',
+        ssc: 'XDAI',
+        sdc: 'EUR',
+        ssa: '100',
+        wsc: 'XDAI',
+        wsa: '100',
+        wdc: 'USDC'
       });
     } catch (error) {
       console.error("Erreur lors du chargement du script MTP:", error);
