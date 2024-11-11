@@ -101,7 +101,7 @@ export function ImportList({ listURL, list, setModalView, onDismiss }: ImportPro
                       {list.tokens.length} tokens
                     </TYPE.main>
                   </RowFixed>
-                  <ExternalLink href={`https://tokenlists.levinswap.realt.community/token-list?url=${listURL}`}>
+                  <ExternalLink href={`https://tokenlists.levinswap.realtoken.community/token-list?url=${listURL}`}>
                     <TYPE.main fontSize={'12px'} color={theme.blue1}>
                       {listURL}
                     </TYPE.main>

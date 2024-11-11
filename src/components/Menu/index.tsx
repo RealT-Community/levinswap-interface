@@ -100,11 +100,11 @@ export default function Menu() {
 
       {open && (
         <MenuFlyout>
-          <MenuItem id="link" href="https://levinswap.realt.community/">
+          <MenuItem id="link" href="https://levinswap.realtoken.community/">
             <Info size={14} />
             About
           </MenuItem>
-          <MenuItem id="link" href="https://community-realt.gitbook.io/tuto-community/">
+          <MenuItem id="link" href="https://wiki.realtoken.community">
             <BookOpen size={14} />
             Wiki
           </MenuItem>
@@ -116,7 +116,7 @@ export default function Menu() {
             <MessageCircle size={14} />
             Discord
           </MenuItem>
-          <MenuItem id="link" href="https://info.levinswap.realt.community/">
+          <MenuItem id="link" href="https://info.levinswap.realtoken.community/">
             <PieChart size={14} />
             Analytics
           </MenuItem>

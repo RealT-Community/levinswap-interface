@@ -30,15 +30,15 @@ export default function URLWarning() {
     <PhishAlert isActive={showURLWarning}>
       <div style={{ display: 'flex' }}>
         <AlertTriangle style={{ marginRight: 6 }} size={12} /> Make sure the URL is
-        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>app.levinswap.realt.community</code>
+        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>app.levinswap.realtoken.community</code>
       </div>
       <StyledClose size={12} onClick={toggleURLWarning} />
     </PhishAlert>
-  ) : window.location.hostname === 'app.levinswap.realt.community' ? (
+  ) : window.location.hostname === 'app.levinswap.realtoken.community' ? (
     <PhishAlert isActive={showURLWarning}>
       <div style={{ display: 'flex' }}>
         <AlertTriangle style={{ marginRight: 6 }} size={12} /> Always make sure the URL is
-        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>app.levinswap.realt.community</code> - bookmark it
+        <code style={{ padding: '0 4px', display: 'inline', fontWeight: 'bold' }}>app.levinswap.realtoken.community</code> - bookmark it
         to be safe.
       </div>
       <StyledClose size={12} onClick={toggleURLWarning} />
