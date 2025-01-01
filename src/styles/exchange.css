@@ -1,0 +1,46 @@
+.exchange-container {
+  width: 100%;
+  max-width: 100% !important;
+  padding: 0 1rem;
+  display: flex; /* Ajout de flex pour gérer l'espace */
+  flex-direction: column; /* Alignement vertical */
+  height: auto; /* Permet à la carte de s'adapter à son contenu */
+}
+
+@media (min-width: 768px) {
+  .exchange-container {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .exchange-container {
+    padding: 0 4rem;
+  }
+}
+
+:root {
+  --levin-primary: #cab0c2;
+  --levin-secondary: #BC4E9C;
+  --levin-gradient: linear-gradient(135deg, var(--levin-primary), var(--levin-secondary));
+  --card-bg: #1a1b1e;
+  --card-bg-light: #2c2e33;
+  --card-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Override Mantine tab styles */
+[class*="m-"][data-active][data-active] {
+  color: #795d78 !important;
+  font-weight: 700 !important;
+}
+
+.mantine-Tabs-tab[data-active] {
+  color: #795d78 !important;
+  font-weight: 700 !important;
+}
+
+/* Additional specificity for tab text */
+.mantine-Tabs-tab[data-active] .mantine-Text-root {
+  color: #795d78 !important;
+  font-weight: 700 !important;
+}

@@ -1,0 +1,45 @@
+.container {
+  background-color: var(--mantine-color-dark-7);
+  border: 1px solid var(--mantine-color-dark-4);
+  border-radius: var(--mantine-radius-md);
+  padding: var(--mantine-spacing-md);
+  margin-top: var(--mantine-spacing-xs);
+}
+
+.row {
+  padding: var(--mantine-spacing-xs) 0;
+  border-bottom: 1px solid var(--mantine-color-dark-4);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.infoIcon {
+  color: var(--mantine-color-dimmed);
+  cursor: help;
+}
+
+.warning {
+  color: var(--mantine-color-red-6);
+}
+
+.routeContainer {
+  padding-top: var(--mantine-spacing-xs);
+}
+
+.route {
+  background-color: var(--mantine-color-dark-6);
+  border-radius: var(--mantine-radius-sm);
+  padding: var(--mantine-spacing-xs);
+}
+
+.tokenIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.arrow {
+  color: var(--mantine-color-dimmed);
+}

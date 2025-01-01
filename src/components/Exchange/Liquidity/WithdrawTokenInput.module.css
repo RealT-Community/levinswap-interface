@@ -1,0 +1,75 @@
+.wrapper {
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--mantine-color-dark-8);
+  border-radius: var(--mantine-radius-md);
+  border: 1px solid var(--mantine-color-dark-5);
+  transition: border-color 0.2s ease;
+  padding: 0.5rem;
+}
+
+.inputWrapper:hover {
+  border-color: var(--mantine-color-dark-4);
+}
+
+.inputWrapper:focus-within {
+  border-color: var(--mantine-color-violet-5);
+}
+
+.textInputWrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.loadingInput {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.maxButton {
+  position: absolute;
+  left: 8px;
+  z-index: 2;
+  padding: 4px 8px;
+  border-radius: var(--mantine-radius-sm);
+  background-color: transparent;
+  color: var(--mantine-color-gray-5);
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  border: 1px solid var(--mantine-color-dark-4);
+}
+
+.maxButton:hover {
+  background-color: var(--mantine-color-dark-6);
+  color: var(--mantine-color-white);
+  border-color: var(--mantine-color-dark-3);
+}
+
+.tokenInfo {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--mantine-radius-sm);
+  background-color: var(--mantine-color-dark-6);
+  margin-left: 0.5rem;
+  min-width: 100px;
+  justify-content: center;
+}
+
+.tokenImageWrapper {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--mantine-color-dark-4);
+  margin-right: 0.5rem;
+} 

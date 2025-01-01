@@ -1,57 +1,205 @@
-# Levinswap Interface
+# 🔄 LevinSwap Interface v2
 
-[![Lint](https://github.com/Levinswap/Levinswap-interface/workflows/Lint/badge.svg)](https://github.com/Levinswap/Levinswap-interface/actions?query=workflow%3ALint)
-[![Tests](https://github.com/Levinswap/Levinswap-interface/workflows/Tests/badge.svg)](https://github.com/Levinswap/Levinswap-interface/actions?query=workflow%3ATests)
-[![Styled With Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
+Interface utilisateur décentralisée pour l'échange de tokens sur la blockchain Gnosis Chain, basée sur le protocole Uniswap v2.
 
-An open source interface for Levinswap -- a protocol for decentralized exchange of xdai and ethereum bridged tokens.
+## 🌟 Fonctionnalités
 
-- Website: [levinswap.realtoken.community](https://levinswap.realtoken.community/)
-- Interface: [app.levinswap.realtoken.community](https://app.levinswap.realtoken.community)
-- Docs: [community-realt.gitbook.io/tuto-community/](https://community-realt.gitbook.io/tuto-community/)
-- Twitter: [@Levinswap](https://twitter.com/Levinswap)
-- Email: [contact@realtoken.community](mailto:contact@realtoken.community)
+- 💱 Échange de tokens (Swap)
+- 💧 Gestion des pools de liquidité
+- 🔒 Intégration Web3 sécurisée
+- 🌐 Support multilingue
+- 📱 Interface responsive et moderne
+- ⚡ Performances optimisées
 
-## Accessing the Levinswap Interface
+## 🛠 Technologies
 
-To access the Levinswap Interface, use an IPFS gateway link from the
-[latest release](https://github.com/Levinswap/Levinswap-interface/releases/latest),
-or visit [app.levinswap.realtoken.community](https://app.levinswap.realtoken.community).
+- **Framework**: Next.js
+- **Langage**: TypeScript
+- **UI**: Mantine UI
+- **Web3**:
+  - Ethers.js
+  - Web3Modal
+  - @realtoken/realt-commons (Provider Web3)
+- **État**:
+  - Jotai
+  - Zustand
+- **Tests**:
+  - Jest + React Testing Library
+  - Hardhat
+  - Cypress
+- **Gestion des packages**: pnpm
 
-## Listing a token
+## 📋 Prérequis
 
-Please see the
-[@levinswap/default-token-list](https://github.com/levinswap/default-token-list)
-repository.
+- Node.js (via nvm pour la gestion des versions)
+- pnpm
+- Un wallet compatible Web3 (MetaMask, WalletConnect, etc.)
+- Accès à la Gnosis Chain
 
-## Development
+## 🚀 Installation
 
-### Install Dependencies
+1. Cloner le repository
 
 ```bash
-yarn
+git clone https://github.com/RealToken-Community/levinswap-interface.git
+cd levinswap-interface
 ```
 
-### Run
+2. Installer les dépendances
 
 ```bash
-yarn start
+pnpm install
 ```
 
-### Configuring the environment (optional)
+3. Configurer les variables d'environnement
 
-To have the interface default to a different network when a wallet is not connected:
+```bash
+cp .env.example .env.local
+```
 
-1. Make a copy of `.env` named `.env.local`
-2. Change `REACT_APP_NETWORK_ID` to `"{YOUR_NETWORK_ID}"`
-3. Change `REACT_APP_NETWORK_URL` to e.g. `"https://{YOUR_NETWORK_ID}.infura.io/v3/{YOUR_INFURA_KEY}"`
+Remplir les variables nécessaires dans `.env.local`
 
-Note that the interface only works on testnets where both
-[Levinswap V2](https://levinswap.realtoken.community/docs/v2/smart-contracts/factory/) and
-[multicall](https://github.com/makerdao/multicall) are deployed.
-The interface will not work on other networks.
+4. Lancer le projet en développement
 
-## Contributions
+```bash
+pnpm dev
+```
 
-**Please open all pull requests against the `master` branch.**
-CI checks will run against all PRs.
+## 🧪 Tests
+
+Le projet utilise plusieurs niveaux de tests :
+
+### Tests Unitaires et d'Intégration
+
+```bash
+# Lancer tous les tests
+pnpm test
+
+# Mode watch
+pnpm test:watch
+
+# Couverture de code
+pnpm test:coverage
+```
+
+### Tests Web3
+
+```bash
+# Tests blockchain
+pnpm test:web3
+```
+
+### Tests E2E
+
+```bash
+# Lancer les tests E2E
+pnpm test:e2e
+
+# Ouvrir Cypress
+pnpm test:e2e:open
+```
+
+### Structure des Tests
+
+```
+tests/
+├── unit/               # Tests unitaires
+│   ├── utils/         # Tests des utilitaires
+│   ├── hooks/         # Tests des hooks React
+│   └── components/    # Tests des composants
+├── integration/        # Tests d'intégration
+│   ├── pages/         # Tests des pages
+│   ├── features/      # Tests des fonctionnalités
+│   └── flows/         # Tests des flux utilisateur
+├── web3/              # Tests blockchain
+│   ├── contracts/     # Tests des contrats
+│   ├── transactions/ # Tests des transactions
+│   └── providers/    # Tests des providers Web3
+└── e2e/               # Tests end-to-end
+    └── specs/         # Spécifications Cypress
+```
+
+## 🗺 Roadmap
+
+### Interface
+
+#### Phase 1 : Internationalisation et UI
+
+- [ ] Configuration du système de traduction (i18n)
+- [ ] Ajout des traductions FR/EN
+- [ ] Mise à jour des logos et de l'identité visuelle
+- [ ] Mise à jour des liens et références
+
+#### Phase 2 : Amélioration Technique
+
+- [ ] Amélioration de la gestion des erreurs
+- [ ] Optimisation des performances
+- [ ] Mise à jour des dépendances
+- [ ] Documentation technique
+
+### Testing
+
+#### Phase 1 : Tests Unitaires
+
+- [ ] Mise en place des tests pour les utilitaires
+- [ ] Tests des hooks personnalisés
+- [ ] Tests des composants React
+
+#### Phase 2 : Tests d'Intégration
+
+- [ ] Tests des pages principales
+- [ ] Tests des fonctionnalités critiques
+- [ ] Tests des flux utilisateur
+
+#### Phase 3 : Tests Web3
+
+- [ ] Tests des interactions avec les contrats
+- [ ] Tests des transactions
+- [ ] Tests des providers Web3
+
+#### Phase 4 : Tests E2E
+
+- [ ] Tests des parcours utilisateur complets
+- [ ] Tests de performance
+- [ ] Tests d'accessibilité
+
+#### Phase 5 : Optimisation et Documentation
+
+- [ ] Amélioration de la couverture de code
+- [ ] Optimisation des tests
+- [ ] Documentation complète des tests
+- [ ] Guide utilisateur
+- [ ] Documentation de déploiement
+
+## 🏗 Structure du Projet
+
+```
+src/
+├── abis/          # Définitions des contrats
+├── app/           # Pages et routes Next.js
+├── components/    # Composants React réutilisables
+├── config/        # Configuration de l'application
+├── constants/     # Constantes globales
+├── hooks/         # Hooks React personnalisés
+├── i18n/          # Internationalisation
+├── providers/     # Providers React Context
+├── services/      # Services externes
+├── state/         # Gestion d'état global
+├── store/         # Configuration du store
+├── styles/        # Styles globaux
+├── types/         # Types TypeScript
+└── utils/         # Utilitaires
+```
+
+## 🔧 Contribution
+
+Les contributions sont les bienvenues ! Veuillez consulter notre [guide de contribution](./CONTRIBUTING.md) pour plus de détails.
+
+## 📄 Licence
+
+Ce projet est sous licence [MIT](./LICENSE).
+
+## 🔗 Liens utiles
+
+- [Site Web communautaire](https://www.realtoken.community/)
+- [GitHub](https://github.com/RealToken-Community)

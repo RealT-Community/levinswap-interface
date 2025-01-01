@@ -1,0 +1,233 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.amountSection {
+  background: rgba(26, 27, 30, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--mantine-radius-md);
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.percentage {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--mantine-color-white);
+  margin: 0.5rem 0;
+}
+
+.slider {
+  margin: 1.5rem 0;
+}
+
+.percentButton {
+  background: rgba(162, 115, 149, 0.1) !important;
+  border: 1px solid rgba(162, 115, 149, 0.2) !important;
+  color: #cab0c2 !important;
+  transition: all 0.2s ease !important;
+  flex: 1;
+}
+
+.percentButton:hover {
+  background: rgba(162, 115, 149, 0.2) !important;
+  transform: translateY(-1px);
+}
+
+.outputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tokenOutput {
+  background: rgba(26, 27, 30, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--mantine-radius-md);
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.priceSection {
+  background: rgba(26, 27, 30, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--mantine-radius-md);
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.positionCard {
+  background: rgba(26, 27, 30, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 1rem !important;
+}
+
+.positionIcon {
+  color: #cab0c2;
+  opacity: 0.8;
+}
+
+.lpAmount {
+  margin-left: auto;
+}
+
+.positionDetails {
+  background: rgba(162, 115, 149, 0.1);
+  border: 1px solid rgba(162, 115, 149, 0.2);
+  border-radius: var(--mantine-radius-sm);
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 12px rgba(162, 115, 149, 0.15);
+  transform: translateY(-1px);
+}
+
+.positionDetails img {
+  border-radius: 50%;
+  background: #1a1b1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.positionDetails :global(.mantine-Text-root) {
+  color: var(--mantine-color-white);
+}
+
+.positionDetails :global(.mantine-Text-root[data-dimmed]) {
+  color: #cab0c2 !important;
+  font-weight: 500;
+}
+
+.switchWrapper {
+  margin-left: auto;
+  padding-left: 1rem;
+}
+
+.modeSwitch {
+  min-width: 32px;
+}
+
+.modeSwitch :global(.mantine-Switch-track) {
+  width: 77px !important;
+  height: 23px !important;
+  background-color: rgba(162, 115, 149, 0.2) !important;
+  border: 1px solid rgba(162, 115, 149, 0.3) !important;
+  padding: 2px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.modeSwitch :global(.mantine-Switch-thumb) {
+  width: 20px !important;
+  height: 20px !important;
+  background-color: #cab0c2 !important;
+  border: none !important;
+  transform: translateX(0) !important;
+}
+
+.modeSwitch :global(.mantine-Switch-input:checked + .mantine-Switch-track .mantine-Switch-thumb) {
+  transform: translateX(3px) !important;
+}
+
+.modeSwitch :global(.mantine-Switch-trackLabel) {
+  color: white !important;
+  font-size: 10px !important;
+  padding: 0 5px !important;
+  line-height: 21px !important;
+  flex: 1 !important;
+  text-align: center !important;
+}
+
+/* État activé */
+.modeSwitch :global(.mantine-Switch-input:checked + .mantine-Switch-track) {
+  background-color: rgba(162, 115, 149, 0.418) !important;
+  border-color: #cab0c2 !important;
+}
+
+.tokenAmounts {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: rgba(13, 14, 16, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--mantine-radius-sm);
+}
+
+.tokenAmounts img {
+  border-radius: 50%;
+  background: #1a1b1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.withdrawTitle {
+  text-decoration: underline;
+  text-decoration-color: rgba(162, 115, 149, 0.5);
+  text-underline-offset: 4px;
+}
+
+.positionDetails {
+}
+
+.inputWrapper {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.maxButton {
+  color: var(--mantine-color-dimmed);
+  background: transparent !important;
+  transition: all 0.2s ease;
+  padding: 4px 8px !important;
+  height: auto !important;
+  margin-left: 4px;
+}
+
+.maxButton:hover {
+  background-color: rgba(202, 176, 194, 0.1) !important;
+  color: #cab0c2;
+}
+
+.tokenInfo {
+  min-width: 100px;
+  padding: 4px 8px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.tokenInfo img {
+  border-radius: 50%;
+  background: #1a1b1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tokenOutput {
+  background: rgba(26, 27, 30, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--mantine-radius-md);
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inputWrapper {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+} 

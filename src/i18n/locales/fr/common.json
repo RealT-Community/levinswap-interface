@@ -1,0 +1,18 @@
+{
+  "connect": "Connecter le Portefeuille",
+  "disconnect": "Déconnecter",
+  "swap": {
+    "title": "Échanger",
+    "from": "De",
+    "to": "Vers",
+    "balance": "Solde : {{amount}}",
+    "insufficient": "Solde insuffisant",
+    "approve": "Approuver {{symbol}}",
+    "swap": "Échanger"
+  },
+  "errors": {
+    "unknown": "Une erreur inconnue est survenue",
+    "rejected": "Transaction rejetée",
+    "network": "Erreur réseau"
+  }
+}

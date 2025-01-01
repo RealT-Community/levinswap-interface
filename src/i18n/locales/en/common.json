@@ -1,0 +1,18 @@
+{
+  "connect": "Connect Wallet",
+  "disconnect": "Disconnect",
+  "swap": {
+    "title": "Swap",
+    "from": "From",
+    "to": "To",
+    "balance": "Balance: {{amount}}",
+    "insufficient": "Insufficient balance",
+    "approve": "Approve {{symbol}}",
+    "swap": "Swap"
+  },
+  "errors": {
+    "unknown": "An unknown error occurred",
+    "rejected": "Transaction rejected",
+    "network": "Network error"
+  }
+}
