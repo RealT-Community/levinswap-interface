@@ -8,7 +8,7 @@ COPY . .
 
 RUN npm install -g pnpm@latest-10
 
-RUN pnpm install --frozen-lockfile --ignore-scripts --prod
+RUN pnpm install --ignore-scripts --prod --force
 
 RUN pnpm build
 
