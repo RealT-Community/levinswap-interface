@@ -11,8 +11,8 @@ import {
   Tooltip,
 } from "@mantine/core";
 import { IconInfoCircle } from "@tabler/icons-react";
-import { useAtom } from 'jotai';
-import { swapSettingsAtom } from '../../store/swapSettings';
+import { useAtom } from "jotai";
+import { swapSettingsAtom } from "../../store/swapSettings";
 
 interface SwapSettingsProps {
   opened: boolean;
@@ -30,21 +30,23 @@ export function SwapSettings({ opened, onClose }: SwapSettingsProps) {
     }));
   };
 
-  const handleCustomSlippageChange = (value: number | "") => {
-    if (value !== "") {
+  const handleCustomSlippageChange = (value: string | number) => {
+    const numValue = typeof value === "string" ? parseFloat(value) : value;
+    if (!isNaN(numValue)) {
       setSettings((prev) => ({
         ...prev,
         slippageMode: "custom",
-        slippageTolerance: value,
+        slippageTolerance: numValue,
       }));
     }
   };
 
-  const handleDeadlineChange = (value: number | "") => {
-    if (value !== "") {
+  const handleDeadlineChange = (value: string | number) => {
+    const numValue = typeof value === "string" ? parseInt(value) : value;
+    if (!isNaN(numValue)) {
       setSettings((prev) => ({
         ...prev,
-        transactionDeadline: value,
+        transactionDeadline: numValue,
       }));
     }
   };
@@ -69,7 +71,7 @@ export function SwapSettings({ opened, onClose }: SwapSettingsProps) {
       size="md"
     >
       <Stack gap="xl">
-        <div style={{ marginTop: '1rem' }}>
+        <div style={{ marginTop: "1rem" }}>
           <Group justify="space-between" mb="md">
             <Text size="sm" fw={500}>
               Transaction Settings
@@ -103,7 +105,11 @@ export function SwapSettings({ opened, onClose }: SwapSettingsProps) {
                 { label: "0.5%", value: "0.5" },
                 { label: "1%", value: "1.0" },
               ]}
-              value={settings.slippageMode === "custom" ? null : settings.slippageMode}
+              value={
+                settings.slippageMode === "custom"
+                  ? undefined
+                  : settings.slippageMode
+              }
               onChange={handleSlippageChange}
               styles={(theme) => ({
                 root: {
@@ -142,7 +148,9 @@ export function SwapSettings({ opened, onClose }: SwapSettingsProps) {
                       ? "rgba(202, 176, 194, 0.1)"
                       : "var(--card-bg-light)",
                   border: `1px solid ${
-                    settings.slippageMode === "custom" ? "#cab0c2" : "var(--card-border)"
+                    settings.slippageMode === "custom"
+                      ? "#cab0c2"
+                      : "var(--card-border)"
                   }`,
                   color: "white",
                   transition: "all 0.3s ease",
@@ -230,7 +238,9 @@ export function SwapSettings({ opened, onClose }: SwapSettingsProps) {
             </Group>
             <Switch
               checked={settings.expertMode}
-              onChange={(event) => handleExpertModeChange(event.currentTarget.checked)}
+              onChange={(event) =>
+                handleExpertModeChange(event.currentTarget.checked)
+              }
               size="md"
               color="#cab0c2"
               onLabel="ON"

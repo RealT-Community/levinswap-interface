@@ -1,7 +1,7 @@
+import { useTokenLists } from "@/hooks/useTokenLists";
 import { Group, Image, Switch, Text, UnstyledButton } from "@mantine/core";
 import { TokenList } from "../../../store/tokenLists";
 import { TokenListOptions } from "./TokenListOptions";
-import { useTokenLists } from "@/hooks/useTokenLists";
 
 interface TokenListItemProps {
   list: TokenList;
@@ -10,7 +10,12 @@ interface TokenListItemProps {
   url?: string;
 }
 
-export function TokenListItem({ list, onToggle, readonly, url }: TokenListItemProps) {
+export function TokenListItem({
+  list,
+  onToggle,
+  readonly,
+  url,
+}: TokenListItemProps) {
   const { addList } = useTokenLists();
 
   const handleRefresh = async () => {
@@ -24,7 +29,9 @@ export function TokenListItem({ list, onToggle, readonly, url }: TokenListItemPr
         width: "100%",
         padding: "12px",
         borderRadius: theme.radius.md,
-        backgroundColor: list.active ? "rgba(202, 176, 194, 0.1)" : "transparent",
+        backgroundColor: list.active
+          ? "rgba(202, 176, 194, 0.1)"
+          : "transparent",
         border: "1px solid",
         borderColor: list.active ? "#cab0c2" : "transparent",
       })}
@@ -54,6 +61,10 @@ export function TokenListItem({ list, onToggle, readonly, url }: TokenListItemPr
             <TokenListOptions
               listUrl={url}
               onRefresh={handleRefresh}
+              listId={""}
+              onRemove={function (id: string): void {
+                throw new Error("Function not implemented.");
+              }}
             />
           )}
           <Switch

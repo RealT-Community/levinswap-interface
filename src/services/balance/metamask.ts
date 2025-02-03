@@ -31,12 +31,13 @@ export class MetaMaskBalanceProvider implements BalanceProvider {
     }
 
     try {
-      window.ethereum.on("accountsChanged", onBalanceChange);
-      window.ethereum.on("chainChanged", onBalanceChange);
+      const ethereum = window.ethereum as ethers.providers.EtherscanProvider;
+      ethereum.on("accountsChanged", onBalanceChange);
+      ethereum.on("chainChanged", onBalanceChange);
 
       return () => {
-        window.ethereum.removeListener("accountsChanged", onBalanceChange);
-        window.ethereum.removeListener("chainChanged", onBalanceChange);
+        ethereum.removeListener("accountsChanged", onBalanceChange);
+        ethereum.removeListener("chainChanged", onBalanceChange);
       };
     } catch (error) {
       console.error("Error in MetaMask subscription:", error);

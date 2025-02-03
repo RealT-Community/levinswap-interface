@@ -14,6 +14,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: { [chainId: number]: Token[] } = {
       decimals: 18,
       name: "Wrapped XDAI",
       symbol: "WXDAI",
+      logoURI: "",
     },
     // USDC
     {
@@ -22,6 +23,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: { [chainId: number]: Token[] } = {
       decimals: 6,
       name: "USD Coin on Gnosis",
       symbol: "USDC",
+      logoURI: "",
     },
     // WETH
     {
@@ -30,6 +32,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: { [chainId: number]: Token[] } = {
       decimals: 18,
       name: "Wrapped Ether on Gnosis",
       symbol: "WETH",
+      logoURI: "",
     },
     // LEVIN
     {
@@ -38,6 +41,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: { [chainId: number]: Token[] } = {
       decimals: 18,
       name: "Levin Token on Gnosis",
       symbol: "LEVIN",
+      logoURI: "",
     },
   ],
 };

@@ -1,5 +1,3 @@
-import { Chain } from 'viem';
-
 export const gnosisChain = {
   id: 100,
   name: "Gnosis Chain",
@@ -19,4 +17,4 @@ export const gnosisChain = {
       url: "https://gnosisscan.io",
     },
   },
-} as const satisfies Chain;
+} as const;

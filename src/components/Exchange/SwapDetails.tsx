@@ -1,17 +1,17 @@
 "use client";
 
+import { CustomRoute } from "@/hooks/useAllPairs";
 import { Token } from "@/store/tokenLists";
 import { Group, Stack, Text, Tooltip } from "@mantine/core";
 import { IconArrowRight, IconInfoCircle } from "@tabler/icons-react";
 import classes from "./SwapDetails.module.css";
-import { Route } from "@/hooks/useAllPairs";
 
 interface SwapDetailsProps {
   fromToken?: Token;
   toToken?: Token;
   fromAmount: string;
   toAmount: string;
-  route?: Route | null;
+  route?: CustomRoute | null;
   priceImpact: string;
   liquidityProviderFee: string;
 }
@@ -54,7 +54,10 @@ export function SwapDetails({
             <IconInfoCircle size={16} className={classes.infoIcon} />
           </Tooltip>
         </Group>
-        <Text size="sm" className={parseFloat(priceImpact) > 1 ? classes.warning : ""}>
+        <Text
+          size="sm"
+          className={parseFloat(priceImpact) > 1 ? classes.warning : ""}
+        >
           {priceImpact}%
         </Text>
       </Group>
