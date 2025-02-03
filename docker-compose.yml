@@ -1,0 +1,15 @@
+services:
+  web:
+    container_name: levinswap-v2
+    build: .
+    networks:
+      - traefik-realt
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.levinswap-v2.rule=Host(`v2.levinswap.realtoken.community`)"
+      - "traefik.http.routers.levinswap-v2.entrypoints=websecure"
+    restart: always
+
+networks:
+  traefik-realt:
+    external: true
