@@ -8,7 +8,7 @@ COPY . .
 
 RUN npm install -g pnpm@latest-10
 
-RUN pnpm install
+RUN pnpm install --prod
 
 RUN pnpm build
 
