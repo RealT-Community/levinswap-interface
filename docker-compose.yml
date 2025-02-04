@@ -9,8 +9,6 @@ services:
       - "traefik.http.routers.levinswap-v2.rule=Host(`v2.levinswap.realtoken.community`)"
       - "traefik.http.routers.levinswap-v2.entrypoints=websecure"
     restart: always
-    ports:
-      - "12345:80"
 
 networks:
   traefik-realt:
